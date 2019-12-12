@@ -16,10 +16,10 @@
 
 */
 // @material-ui/icons
-import Home from "./pages/Home";
-import QuemSomos from "./pages/QuemSomos";
-import Tratamentos from "./pages/Tratamentos";
-import Contato from "./pages/Contato";
+import Home from "../pages/Home";
+import QuemSomos from "../pages/QuemSomos";
+import Tratamentos from "../pages/Tratamentos";
+import Contato from "../pages/Contato";
 
 
 const dashboardRoutes = [

@@ -1,0 +1,13 @@
+#PreHeader.navbar {
+    background: rgb(74, 130, 80) !important;
+    min-width: 100%;
+    color: white;
+    min-height: 60px;
+    z-index: 5000;
+}
+
+.PreHeader-link{
+    color: white !important;
+}
+
+

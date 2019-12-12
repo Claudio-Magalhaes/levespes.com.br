@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import './Layout.css'
 import 'bootstrap/dist/css/bootstrap.css'
 
 import { createBrowserHistory } from "history";

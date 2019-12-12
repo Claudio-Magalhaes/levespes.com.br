@@ -1,10 +1,11 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 
-import routes from '../routes'
+import routes from '../_core/routes'
 
 
 import NavHeader from "../Component/estrutura/NavHeader/NavHeader"
+import PreHeader from "../Component/estrutura/PreHeader/PreHeader";
 
 
 export default class Layout extends React.Component {
@@ -50,9 +51,9 @@ export default class Layout extends React.Component {
 
         return (
             <>
+                <PreHeader/>
 
                 <NavHeader />
-                {/*<div style={{'height' : '120px'}}></div>*/}
 
                 <div>{this.SwitchRoutes}</div>
 

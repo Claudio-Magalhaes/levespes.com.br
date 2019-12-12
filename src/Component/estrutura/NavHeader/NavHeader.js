@@ -1,69 +1,95 @@
-import React, { Component } from 'react';
-import { Link } from 'react-scroll'
+import React, { useState } from 'react';
+import {
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
+    UncontrolledDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem,
+    NavbarText
+} from 'reactstrap';
 
 import ScrollMagic from 'scrollmagic';
 
-import './styles.css';
+import './styles.css'
 
-export default class NavHeader extends Component {
-
+class NavHeader extends React.Component{
     constructor(props) {
         super(props);
+        this.state = {
+            isOpen: false
+        };
+
         this.controller = new ScrollMagic.Controller();
+
     }
 
     componentDidMount() {
 
         // build scenes
         new ScrollMagic.Scene({
-            offset: '100%',
+            offset: '50%',
         })
-            .setClassToggle("#mainNav", 'affix')
+            .setClassToggle("#NavHeaderTransparente", 'affix')
             .addTo(this.controller);
 
     }
 
-    render() {
-        return (
-            <nav id="mainNav" className="navbar navbar-default navbar-custom navbar-fixed-top">
-                <div className="container">
-                    {/*Brand and toggle get grouped for better mobile display*/}
-                    <div className="navbar-header page-scroll">
-                        <button type="button" className="navbar-toggle" data-toggle="collapse"
-                                data-target="#bs-example-navbar-collapse-1">
-                            <span className="sr-only">Opem Menu</span> Menu <i className="fa fa-bars"></i>
-                        </button>
-                        <Link activeClass="active" className="navbar-brand page-scroll" to="page-top" spy={false} smooth={true}>Start Bootstrap</Link>
-                    </div>
+    toggle = () => {
+        this.setState({
+            isOpen : (!this.state.isOpen)
+        })
+    };
 
-                    {/* Collect the nav links, forms, and other content for toggling */}
-                    <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul className="nav navbar-nav navbar-right">
-                            <li className="hidden">
-                                <Link to={'#page-top'}></Link>
-                            </li>
-                            <li>
-                                <Link activeClass="active" className="page-scroll" to="services" spy={false} smooth={true} >Serviços</Link>
-                            </li>
-                            <li>
-                                <Link activeClass="active" className="page-scroll" to="portfolio" spy={false} smooth={true} >Portfolio</Link>
-                            </li>
-                            <li>
-                                <Link activeClass="active" className="page-scroll" to="about" spy={false} smooth={true} >Sobre</Link>
-                            </li>
-                            <li>
-                                <Link activeClass="active" className="page-scroll" to="team" spy={false} smooth={true} >Equipe</Link>
-                            </li>
-                            <li>
-                                <Link activeClass="active" className="page-scroll" to="contact" spy={false} smooth={true} >Contato</Link>
-                            </li>
-                        </ul>
-                    </div>
-                    {/*/.navbar-collapse*/}
-                </div>
-                {/*/.container-fluid*/}
-            </nav>
-        )
+    render() {
+
+        return (
+            <div>
+                <Navbar id={'NavHeaderTransparente'} fixed={'top'} color="false" light expand="md">
+                    <NavbarBrand href="/">reactstrap</NavbarBrand>
+                    <NavbarToggler onClick={this.toggle} />
+                    <Collapse isOpen={this.state.isOpen} navbar>
+                        <Nav className="ml-auto mt-2 mr-3" navbar>
+                            <NavItem>
+                                <NavLink href="/components/">Home</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="https://github.com/reactstrap/reactstrap">Quem Somos</NavLink>
+                            </NavItem>
+                            <UncontrolledDropdown nav inNavbar>
+                                <DropdownToggle nav caret>
+                                    Nossos Tratamentos
+                                </DropdownToggle>
+                                <DropdownMenu right>
+                                    <DropdownItem>
+                                        Option 1
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        Option 2
+                                    </DropdownItem>
+                                    <DropdownItem divider />
+                                    <DropdownItem>
+                                        Reset
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </UncontrolledDropdown>
+                            <NavItem>
+                                <NavLink href="https://github.com/reactstrap/reactstrap">Contato</NavLink>
+                            </NavItem>
+                        </Nav>
+                    </Collapse>
+                </Navbar>
+            </div>
+        );
+
     }
 
 }
+
+
+export default NavHeader;
