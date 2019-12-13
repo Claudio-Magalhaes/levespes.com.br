@@ -29,19 +29,21 @@ const Example = (props) => {
         <div>
             <Navbar  id={'PreHeader'} color="false" light expand="md">
                 <span onClick={toggle} className='d-md-none ml-auto mr-auto'>Nossos Contatos</span>
+
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="ml-auto mr-auto" navbar>
                         <NavItem>
-                            <NavLink className='PreHeader-link' href={null}><WhatsAppIcon/> (21) 88888-8888</NavLink>
+                            <NavLink className='PreHeader-link' href={null}><WhatsAppIcon/> (21) 98343-3908</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink className='PreHeader-link' href={null}><PhoneIcon/> (21) 8888-8888 / 8888-8888</NavLink>
+                            <NavLink className='PreHeader-link' href={null}><PhoneIcon/> (21) 2544-6337 / 98343-3908</NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink className='PreHeader-link' href={null}><FacebookIcon/> Visite nossa Página</NavLink>
                         </NavItem>
                     </Nav>
                 </Collapse>
+
             </Navbar>
         </div>
     );

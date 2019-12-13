@@ -1,0 +1,16 @@
+#teste{
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#Container3{
+
+}
+
+#Container4{
+    background: rgba(198, 235, 191, 0.75);
+    border-top: 5px solid rgba(198, 235, 191, 1);
+    border-bottom: 5px solid rgba(198, 235, 191, 1);
+}

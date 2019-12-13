@@ -16,7 +16,8 @@ import {
 
 import ScrollMagic from 'scrollmagic';
 
-import './styles.css'
+import logo from './Logo.png';
+import './styles.css';
 
 class NavHeader extends React.Component{
     constructor(props) {
@@ -51,36 +52,37 @@ class NavHeader extends React.Component{
         return (
             <div>
                 <Navbar id={'NavHeaderTransparente'} fixed={'top'} color="false" light expand="md">
-                    <NavbarBrand href="/">reactstrap</NavbarBrand>
+                    <NavbarBrand className='ml-5' href="/"><img src={logo}/></NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto mt-2 mr-3" navbar>
-                            <NavItem>
-                                <NavLink href="/components/">Home</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink href="https://github.com/reactstrap/reactstrap">Quem Somos</NavLink>
-                            </NavItem>
-                            <UncontrolledDropdown nav inNavbar>
-                                <DropdownToggle nav caret>
-                                    Nossos Tratamentos
-                                </DropdownToggle>
-                                <DropdownMenu right>
-                                    <DropdownItem>
-                                        Option 1
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Option 2
-                                    </DropdownItem>
-                                    <DropdownItem divider />
-                                    <DropdownItem>
-                                        Reset
-                                    </DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledDropdown>
-                            <NavItem>
-                                <NavLink href="https://github.com/reactstrap/reactstrap">Contato</NavLink>
-                            </NavItem>
+                            {this.props.router.map(router => {
+
+                                return (
+                                    <NavItem>
+                                        <NavLink href={router.path}>{router.name}</NavLink>
+                                    </NavItem>
+                                )
+                            })}
+
+                            {/*<UncontrolledDropdown nav inNavbar>*/}
+                            {/*    <DropdownToggle nav caret>*/}
+                            {/*        Nossos Tratamentos*/}
+                            {/*    </DropdownToggle>*/}
+                            {/*    <DropdownMenu right>*/}
+                            {/*        <DropdownItem>*/}
+                            {/*            Option 1*/}
+                            {/*        </DropdownItem>*/}
+                            {/*        <DropdownItem>*/}
+                            {/*            Option 2*/}
+                            {/*        </DropdownItem>*/}
+                            {/*        <DropdownItem divider />*/}
+                            {/*        <DropdownItem>*/}
+                            {/*            Reset*/}
+                            {/*        </DropdownItem>*/}
+                            {/*    </DropdownMenu>*/}
+                            {/*</UncontrolledDropdown>*/}
+
                         </Nav>
                     </Collapse>
                 </Navbar>

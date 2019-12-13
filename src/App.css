@@ -6,5 +6,21 @@
 body {
   overflow-x: hidden;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: #777777 !important;
+  background: rgba(251, 245, 247, 0.35) !important;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: trajan;
+  text-align: center;
+}
+
+a {
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+}
+
+.alignAll-center{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center
 }

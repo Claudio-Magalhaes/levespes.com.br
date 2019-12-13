@@ -12,7 +12,7 @@ export default class Tratamento extends React.Component{
 
         return(
             <>
-                <Header/>
+                <h1>Contato</h1>
             </>
         );
     }

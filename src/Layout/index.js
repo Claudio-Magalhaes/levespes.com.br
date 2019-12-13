@@ -53,7 +53,7 @@ export default class Layout extends React.Component {
             <>
                 <PreHeader/>
 
-                <NavHeader />
+                <NavHeader router={routes} />
 
                 <div>{this.SwitchRoutes}</div>
 

@@ -12,7 +12,7 @@ export default class QuemSomos extends React.Component{
 
         return(
             <>
-                <Header/>
+                <h1>Quem Somos</h1>
             </>
         );
     }

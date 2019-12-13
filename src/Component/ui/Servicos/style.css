@@ -1,0 +1,8 @@
+.cardServicos{
+    max-width: 24%;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.cardImgServicos{
+    border-radius: 10px 10px 0 0;
+}
