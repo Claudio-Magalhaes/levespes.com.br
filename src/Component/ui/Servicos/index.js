@@ -9,7 +9,7 @@ import './style.css'
 const Example = (prop) => {
     return (
         <>
-            <Card className='m-auto cardServicos'>
+            <Card className='cardServicos m-auto'>
                 <CardImg className='cardImgServicos' top width="100%" src={prop.data.img} alt="Card image cap" />
                 <CardBody>
                     <CardTitle>{prop.data.title}</CardTitle>

@@ -20,7 +20,7 @@ export default class Home extends React.Component{
             <>
                 <Header/>
                 <Container>
-                    <h1 className=''>Um Pouco mais sobre a Leves Pés</h1>
+                    <h1 className=''>Um Pouco mais sobre a Podologia</h1>
                     <p style={{textAlign: "justify"}}>
                         Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
                     </p>
@@ -31,7 +31,7 @@ export default class Home extends React.Component{
                 <div className='container'>
                     <div className="row" id="Container3">
                         <div className="col-lg-12 text-center">
-                            <h2 className="section-heading">Os Benefícios da Podologia</h2>
+                            <h2 className="section-heading">Os Benefícios e tratamentos da Podologia</h2>
                         </div>
 
                         <div className="row text-center">
@@ -88,7 +88,7 @@ export default class Home extends React.Component{
 
 
                 <div className='container mt-5'>
-                    <div className='row'>
+                    <div className='row col-12'>
 
                         <Servicos data={{
                             title: 'Serviço 1',
