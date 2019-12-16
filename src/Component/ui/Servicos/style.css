@@ -1,8 +1,65 @@
 .cardServicos{
     border-radius: 10px 10px 10px 10px;
+    margin-bottom: 20px;
 }
 
 .cardImgServicos{
     min-width: 100%;
+    max-height: 200px;
     border-radius: 10px 10px 0 0;
 }
+
+.cardServBody{
+
+}
+
+/*
+    Layout para celulares e telas SM
+*/
+@media (max-width: 767px) {
+
+    .cardServicos{
+        margin: 25px;
+        padding: 0px;
+    }
+
+}
+
+
+/*
+        MD
+*/
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .cardServicos{
+        padding: 0px;
+        max-width: 14rem;
+        margin: 0.5rem;
+    }
+
+}
+
+/*
+        LG
+*/
+
+@media (min-width: 992px) {
+
+    .cardServicos{
+        padding: 0px;
+        max-width: 16rem;
+        margin: 0.5rem;
+    }
+
+
+}
+
+/*
+        XL
+*/
+
+@media (min-width: 1200px) {
+
+}
+
+

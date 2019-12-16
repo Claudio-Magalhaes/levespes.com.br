@@ -14,3 +14,12 @@
     border-top: 5px solid rgba(198, 235, 191, 1);
     border-bottom: 5px solid rgba(198, 235, 191, 1);
 }
+
+#Container6 {
+    height: 500px;
+    background: #497c4c;
+}
+
+#Container7 {
+    height: 400px;
+}

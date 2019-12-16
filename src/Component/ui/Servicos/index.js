@@ -9,11 +9,10 @@ import './style.css'
 const Example = (prop) => {
     return (
         <>
-            <Card className='cardServicos m-auto'>
+            <Card className='cardServicos col-sm-12 col-md-4 '>
                 <CardImg className='cardImgServicos' top width="100%" src={prop.data.img} alt="Card image cap" />
-                <CardBody>
+                <CardBody className='cardServBody'>
                     <CardTitle>{prop.data.title}</CardTitle>
-                    <CardSubtitle>Card subtitle</CardSubtitle>
                     <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
                     <Button>Button</Button>
                 </CardBody>

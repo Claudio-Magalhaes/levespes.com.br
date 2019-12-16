@@ -2,7 +2,7 @@
 #NavHeaderTransparente.navbar {
     transition: background-color 1s;
     margin-top: 60px;
-    background: rgba(255,255,255,0.3) !important;
+    background: rgba(255,255,255,.7) !important;
     position: absolute;
     min-width: 100%;
 }
