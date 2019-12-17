@@ -15,6 +15,10 @@
     border-bottom: 5px solid rgba(198, 235, 191, 1);
 }
 
+#Container5{
+    height: auto;
+}
+
 #Container6 {
     height: 500px;
     background: #497c4c;

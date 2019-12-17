@@ -5,6 +5,11 @@
     cursor: pointer;
     border: none;
 }
+.cardServicos {
+    display: block;
+    white-space: normal !important;
+}
+
 .menu-item-wrapper.active {
 
 }

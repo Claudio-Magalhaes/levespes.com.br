@@ -19,8 +19,13 @@
 @media (max-width: 767px) {
 
     .cardServicos{
-        margin: 25px;
+        max-width: 12rem;
+        margin: 5px;
         padding: 0px;
+    }
+
+    .scroll-menu-arrow{
+        display: none;
     }
 
 }

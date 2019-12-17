@@ -7,16 +7,81 @@ import Servicos from '../../Component/ui/Servicos'
 import bg from '../../assets/image/bgTeste1.jpg'
 import serv1 from '../../assets/image/exemplos/servicos/serv1.jpg';
 
-import ServicosL from '../../Component/estrutura/Lateral/ServcosL'
+import PrateleiraHorizontal from '../../Component/estrutura/PrateleiraHorizontal'
 
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
 import './style.css'
 
+
+
 export default class Home extends React.Component{
     constructor(props) {
         super(props);
-
+        this.state = {
+            list: [
+                {
+                    title: 'Serviço 1',
+                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+                    img: serv1,
+                    id: '1'
+                },
+                {
+                    title: 'Serviço 2',
+                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+                    img: serv1,
+                    id: '2'
+                },
+                {
+                    title: 'Serviço 3',
+                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+                    img: serv1,
+                    id: '3'
+                },
+                {
+                    title: 'Serviço 4',
+                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+                    img: serv1,
+                    id: '4'
+                },
+                {
+                    title: 'Serviço 5',
+                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+                    img: serv1,
+                    id: '5'
+                },
+                {
+                    title: 'Serviço 6',
+                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+                    img: serv1,
+                    id: '6'
+                },
+                {
+                    title: 'Serviço 7',
+                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+                    img: serv1,
+                    id: '7'
+                },
+                {
+                    title: 'Serviço 8',
+                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+                    img: serv1,
+                    id: '8'
+                },
+                {
+                    title: 'Serviço 9',
+                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+                    img: serv1,
+                    id: '9'
+                },
+                {
+                    title: 'Serviço 10',
+                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+                    img: serv1,
+                    id: '10'
+                },
+            ]
+        }
     }
 
     render() {
@@ -97,26 +162,10 @@ export default class Home extends React.Component{
                 </div>
 
 
-                <div className='container mt-5'>
-                    <div className='row'>
+                <div id='Container5' className='container-fluid mt-5'>
 
-                        <Servicos data={{
-                            title: 'Serviço 1',
-                            img: serv1
-                        }}/>
-                        <Servicos data={{
-                            title: 'Serviço 1',
-                            img: bg
-                        }}/>
-                        <Servicos data={{
-                            title: 'Serviço 1',
-                            img: bg
-                        }}/>
-                        <Servicos data={{
-                            title: 'Serviço 1',
-                            img: bg
-                        }}/>
-                    </div>
+                    <PrateleiraHorizontal list={this.state.list} tipo={'tratamento'}/>
+
                     <div className='alignAll-center mt-5'>
                         <h2>Ver Todos os nossos Tratamentos</h2>
                     </div>
@@ -124,11 +173,13 @@ export default class Home extends React.Component{
 
 
                 <div id='Container6' className='container-fluid'>
-                    <ArrowForwardIosIcon/>
+
                 </div>
 
                 <div id='Container7' className='container-fluid'>
-                    <ServicosL/>
+                    <h4>Veja També</h4>
+                    <h3>Produtos Disponíveis</h3>
+                    <PrateleiraHorizontal list={this.state.list} tipo={'produtos'}/>
                 </div>
             </>
         );
