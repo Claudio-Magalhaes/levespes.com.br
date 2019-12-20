@@ -1,0 +1,5 @@
+.tteste:focus-visible{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 5px 0 5px;
+}

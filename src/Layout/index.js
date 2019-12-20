@@ -6,6 +6,7 @@ import routes from '../_core/routes'
 
 import NavHeader from "../Component/estrutura/NavHeader/NavHeader"
 import PreHeader from "../Component/estrutura/PreHeader/PreHeader";
+import {Footer} from "../Component/estrutura/Footer";
 
 
 export default class Layout extends React.Component {
@@ -57,7 +58,7 @@ export default class Layout extends React.Component {
 
                 <div>{this.SwitchRoutes}</div>
 
-                {/*<Footer/>*/}
+                <Footer/>
             </>
         );
     }

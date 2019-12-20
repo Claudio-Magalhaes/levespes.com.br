@@ -9,19 +9,13 @@ import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import {Button, Card, CardBody, CardImg, CardText, CardTitle} from "reactstrap";
 import CardSubtitle from "reactstrap/es/CardSubtitle";
 
+import CardServicos  from "../../../Component/ui/Card/CardServicos";
 
 // One item component
 // selected prop will be passed
-const Tratamentos = ({ title, text, img, id }) => {
+const Tratamentos = ({ title, text, img, id, duracao }) => {
     return (
-        <Card className='cardServicos col-sm-1 col-4 '>
-            <CardImg className='cardImgServicos' top width="100%" src={img} alt="Card image cap" />
-            <CardBody className='cardServBody'>
-                <CardTitle>{title}</CardTitle>
-                <CardText>{text}</CardText>
-                <Button>Button</Button>
-            </CardBody>
-        </Card>
+        <CardServicos data={{ title, text, img, id, duracao }} />
     );
 };
 
@@ -40,7 +34,7 @@ const Produtos = ({ title, text, img, id }) => {
 // All items component
 // Important! add unique key
 const Menu = (list, tipo) => list.map(el => {
-    const { title, text, img, id } = el;
+    const { title, text, img, id, duracao } = el;
 
     if(tipo === 'tratamento'){
         return (
@@ -50,6 +44,7 @@ const Menu = (list, tipo) => list.map(el => {
                 img={img}
                 id-id
                 key={id}
+                duracao={duracao}
             />
         );
     }else if(tipo === 'produtos'){
@@ -95,14 +90,13 @@ class Index extends Component {
         this.setState({ selected: key });
     };
 
-
     render() {
         const { selected } = this.state;
         // Create menu from items
         const menu = Menu(this.props.list, this.props.tipo);
 
         return (
-            <div style={{height: '400px'}}>
+            <div style={{height: 'auto'}}>
                 <ScrollMenu
                     data={menu}
                     arrowLeft={ArrowLeft}
