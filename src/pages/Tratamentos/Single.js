@@ -1,10 +1,12 @@
 import React from "react";
+import classnames from 'classnames'
 
-import Header from '../../Component/estrutura/Header'
-import { ContainerBranco } from "../../Component/ui/Container/ContainerBranco";
+import { Container, TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 
-import {Container, Card, CardBody, CardImg, CardText, CardTitle} from "reactstrap";
-import CardServicos  from "../../Component/ui/Card/CardServicos";
+import {
+    Img
+} from '../../assets/css/pages/Tratamentos/Single'
+
 import serv1 from '../../assets/image/exemplos/servicos/serv1.jpg';
 import {H1} from "../../Component/ui/Title";
 
@@ -12,105 +14,91 @@ export default class Single extends React.Component{
     constructor(props){
         super(props);
         this.state ={
-            listServicos:  [
-                {
-                    title: 'Massagem I',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '01:40 Hs',
-                    id: '1'
-                },
-                {
-                    title: 'Massagem II',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '2'
-                },
-                {
-                    title: 'Pacote de Terapias II',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '3'
-                },
-                {
-                    title: 'Hidratação Exclusiva',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '4'
-                },
-                {
-                    title: 'Corte de Unhas',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '5'
-                },
-                {
-                    title: 'Convencional',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '6'
-                },
-                {
-                    title: 'Infantil',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '7'
-                },
-                {
-                    title: 'Órtese',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '8'
-                },
-                {
-                    title: 'Exclusivo',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '9'
-                },
-                {
-                    title: 'Unha Encravada',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '10'
-                },
-                {
-                    title: 'Cauterização e Curativos',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '11'
-                },
-                {
-                    title: 'Pacote de Terapias I',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '12'
-                }
-            ]
+            trat: {
+                title: 'ÓRTESE',
+                text: "Antissepsia, remoção da onicofose/calo subungueal com 3 aplicações em 3 meses.",
+                text2: 'Dispositivo utilizado para correção da unha encravada com FMM (Fibra de Memória Molecular).',
+                img: serv1,
+                duracao: '00:30 Hs',
+                id: '1'
+            },
+            activeTab : '1'
         }
     }
+
+    toggle = tab =>{
+        if(this.state.activeTab !== tab) this.setState({activeTab: tab});
+    };
 
     render() {
 
         return(
-            <>
+            <div style={{minHeight: '750px'}}>
                 <Container className='mt-5 pt-5'>
 
-                    <H1>Single</H1>
+                    <Nav tabs>
+                        <NavItem>
+                            <NavLink
+                                className={classnames({ active: this.state.activeTab === '1' })}
+                                onClick={() => { this.toggle('1'); }}
+                            >
+                                Descrição do Tratamento
+                            </NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink
+                                className={classnames({ active: this.state.activeTab === '2' })}
+                                onClick={() => { this.toggle('2'); }}
+                            >
+                                Informações do Tratamento
+                            </NavLink>
+                        </NavItem>
+                    </Nav>
+                    <TabContent activeTab={this.state.activeTab}>
+                        <TabPane tabId="1">
+                            <Row className='mt-3'>
+                                <Col lg='5' md='5' sm="12">
+                                    <Img src={this.state.trat.img}/>
+                                </Col>
+                                <Col lg='7' md='7' sm="12">
+
+                                    <H1>{this.state.trat.title}</H1>
+
+                                    <p style={{fontSize: '15pt'}}>
+                                        {this.state.trat.text}
+                                    </p>
+
+                                    <div className='p-2' style={{borderRadius: '10px', background: '#C6EBBF'}}>
+                                        <p style={{fontSize: '15pt', textAlign: 'justify'}}>
+                                            {this.state.trat.text2}
+                                        </p>
+                                    </div>
+
+                                </Col>
+                            </Row>
+                        </TabPane>
+                        <TabPane tabId="2">
+                            <Row>
+                                <Col sm="6">
+                                    <Card body>
+                                        <CardTitle>Special Title Treatment</CardTitle>
+                                        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                                        <Button>Go somewhere</Button>
+                                    </Card>
+                                </Col>
+                                <Col sm="6">
+                                    <Card body>
+                                        <CardTitle>Special Title Treatment</CardTitle>
+                                        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                                        <Button>Go somewhere</Button>
+                                    </Card>
+                                </Col>
+                            </Row>
+                        </TabPane>
+                    </TabContent>
 
                 </Container>
-            </>
+            </div>
         );
     }
 
