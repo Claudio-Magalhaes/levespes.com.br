@@ -42,7 +42,7 @@ const Menu = (list, tipo) => list.map(el => {
                 title={title}
                 text={text}
                 img={img}
-                id-id
+                id={id}
                 key={id}
                 duracao={duracao}
             />

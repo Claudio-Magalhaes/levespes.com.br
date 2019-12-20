@@ -19,6 +19,7 @@
 import Home from "../pages/Home";
 import QuemSomos from "../pages/QuemSomos";
 import Tratamentos from "../pages/Tratamentos";
+import Single from '../pages/Tratamentos/Single'
 import Contato from "../pages/Contato";
 
 
@@ -36,6 +37,13 @@ const dashboardRoutes = [
         menu: true,
         name: "Quem Somos",
         component: QuemSomos,
+    },
+    {
+        path: "/tratamentos",
+        params: '/:id',
+        menu: false,
+        name: "Tratamentos Informações",
+        component: Single,
     },
     {
         path: "/tratamentos",

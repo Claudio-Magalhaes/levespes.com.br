@@ -6,9 +6,10 @@ import { ContainerBranco } from "../../Component/ui/Container/ContainerBranco";
 import {Container, Card, CardBody, CardImg, CardText, CardTitle} from "reactstrap";
 import CardServicos  from "../../Component/ui/Card/CardServicos";
 import serv1 from '../../assets/image/exemplos/servicos/serv1.jpg';
+import {H1} from "../../Component/ui/Title";
 
-export default class Tratamento extends React.Component{
-    constructor(props) {
+export default class Single extends React.Component{
+    constructor(props){
         super(props);
         this.state ={
             listServicos:  [
@@ -105,15 +106,8 @@ export default class Tratamento extends React.Component{
         return(
             <>
                 <Container className='mt-5 pt-5'>
-                    <div className='row'>
 
-                        {this.state.listServicos.map(s =>(
-                            <>
-                                <CardServicos data={s} />
-                            </>
-                        ))}
-
-                    </div>
+                    <H1>Single</H1>
 
                 </Container>
             </>

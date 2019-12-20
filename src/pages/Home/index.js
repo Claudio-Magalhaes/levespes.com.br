@@ -2,19 +2,19 @@ import React from "react";
 
 import Header from '../../Component/estrutura/Header'
 import { ContainerBranco } from '../../Component/ui/Container/ContainerBranco';
-import Servicos from '../../Component/ui/Servicos'
 
 import bg from '../../assets/image/bgTeste1.jpg'
 import serv1 from '../../assets/image/exemplos/servicos/serv1.jpg';
+import bg6 from '../../assets/image/bgCont6.png'
 
 import PrateleiraHorizontal from '../../Component/estrutura/PrateleiraHorizontal'
-
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
 import './style.css'
 
 import 'animate.css'
 import ScrollMagic from "scrollmagic";
+
+import { baseDeCores as cores} from '../../_core/Variable'
 
 import { CardBeneficios } from '../../Component/ui/Card/CardBeneficios'
 import { H1 } from '../../Component/ui/Title'
@@ -28,87 +28,87 @@ export default class Home extends React.Component{
             listServicos:  [
                 {
                     title: 'Massagem I',
-                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+                    text: "Some quick example text to build on the card title and make up the bulk of...",
                     img: serv1,
                     duracao: '01:40 Hs',
-                    id: '3'
+                    id: '1'
                 },
                 {
                     title: 'Massagem II',
-                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+                    text: "Some quick example text to build on the card title and make up the bulk of...",
+                    img: serv1,
+                    duracao: '00:40 Hs',
+                    id: '2'
+                },
+                {
+                    title: 'Pacote de Terapias II',
+                    text: "Some quick example text to build on the card title and make up the bulk of...",
+                    img: serv1,
+                    duracao: '00:40 Hs',
+                    id: '3'
+                },
+                {
+                    title: 'Hidratação Exclusiva',
+                    text: "Some quick example text to build on the card title and make up the bulk of...",
                     img: serv1,
                     duracao: '00:40 Hs',
                     id: '4'
                 },
                 {
-                    title: 'Pacote de Terapias I',
-                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+                    title: 'Corte de Unhas',
+                    text: "Some quick example text to build on the card title and make up the bulk of...",
                     img: serv1,
                     duracao: '00:40 Hs',
                     id: '5'
                 },
                 {
-                    title: 'Pacote de Terapias II',
-                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+                    title: 'Convencional',
+                    text: "Some quick example text to build on the card title and make up the bulk of...",
                     img: serv1,
                     duracao: '00:40 Hs',
                     id: '6'
                 },
                 {
-                    title: 'Hidratação Exclusiva',
-                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+                    title: 'Infantil',
+                    text: "Some quick example text to build on the card title and make up the bulk of...",
                     img: serv1,
                     duracao: '00:40 Hs',
                     id: '7'
                 },
                 {
-                    title: 'Corte de Unhas',
-                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+                    title: 'Órtese',
+                    text: "Some quick example text to build on the card title and make up the bulk of...",
                     img: serv1,
                     duracao: '00:40 Hs',
                     id: '8'
                 },
                 {
-                    title: 'Convencional',
-                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+                    title: 'Exclusivo',
+                    text: "Some quick example text to build on the card title and make up the bulk of...",
                     img: serv1,
                     duracao: '00:40 Hs',
                     id: '9'
                 },
                 {
-                    title: 'Infantil',
-                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+                    title: 'Unha Encravada',
+                    text: "Some quick example text to build on the card title and make up the bulk of...",
                     img: serv1,
                     duracao: '00:40 Hs',
                     id: '10'
                 },
                 {
-                    title: 'Órtese',
-                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '2'
-                },
-                {
-                    title: 'Exclusivo',
-                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '2'
-                },
-                {
-                    title: 'Unha Encravada',
-                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '1'
-                },
-                {
                     title: 'Cauterização e Curativos',
-                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+                    text: "Some quick example text to build on the card title and make up the bulk of...",
                     img: serv1,
                     duracao: '00:40 Hs',
-                    id: '1'
+                    id: '11'
+                },
+                {
+                    title: 'Pacote de Terapias I',
+                    text: "Some quick example text to build on the card title and make up the bulk of...",
+                    img: serv1,
+                    duracao: '00:40 Hs',
+                    id: '12'
                 }
             ],
             listProdutos: [
@@ -241,6 +241,8 @@ export default class Home extends React.Component{
             }
         };
 
+        this.animate();
+
         // // build scenes
         // new ScrollMagic.Scene({
         //     triggerElement: '#Container4'
@@ -254,6 +256,14 @@ export default class Home extends React.Component{
         //     .setClassToggle(".imgBoxContainer4", "animated bounceInRight")
         //     .addTo(this.controller);
     }
+
+    animate = () => {
+        new ScrollMagic.Scene({
+            triggerElement: '#Container6'
+        })
+            .setClassToggle(".showCont6", "animated pulse hide show")
+            .addTo(this.controller);
+    };
 
     testeScroll = () => {
         alert('ok');
@@ -283,7 +293,7 @@ export default class Home extends React.Component{
                         <div className="row text-center">
 
                             {this.state.listBeneficios.map(d => (
-                                <CardBeneficios bg={null} className="col-md-4 col-lg-4">
+                                <CardBeneficios key={'beneficios-'+d.titulo} bg={null} className="col-md-4 col-lg-4">
                                     <div className=" imgCardContainer3 alignAll-center ml-auto mr-auto mb-2">
 
                                     </div>
@@ -335,15 +345,29 @@ export default class Home extends React.Component{
                     </div>
                 </div>
 
-
                 <div id='Container6' className='container-fluid'>
+                    <div className='row'>
 
+                        <div id='teste' style={{backgroundImage: 'url("'+bg6+'")'}} className='col-md-7 pt-auto mb-auto'>
+
+                        </div>
+
+                        <div className='col-md-5'>
+
+                            <H1  fontSize={'4rem'} className='showCont6' color={'white'}>Estamos Pertinho!</H1>
+                            <p className='mt-3 tteste' style={{textAlign: "justify"}}>
+
+                            </p>
+
+                        </div>
+                    </div>
                 </div>
+
 
                 <div id='Container7' className='container-fluid'>
                     <h4>Veja També</h4>
                     <h3>Produtos Disponíveis</h3>
-                    <PrateleiraHorizontal list={this.state.listProdutos} tipo={'produtos'}/>
+                    {/*<PrateleiraHorizontal list={this.state.listProdutos} tipo={'produtos'}/>*/}
                 </div>
             </>
         );

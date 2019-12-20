@@ -58,11 +58,13 @@ class NavHeader extends React.Component{
                         <Nav className="ml-auto mt-2 mr-3" navbar>
                             {this.props.router.map(router => {
 
-                                return (
-                                    <NavItem>
-                                        <NavLink href={router.path}>{router.name}</NavLink>
-                                    </NavItem>
-                                )
+                                if(router.menu){
+                                    return (
+                                        <NavItem key={router.name}>
+                                            <NavLink href={router.path}>{router.name}</NavLink>
+                                        </NavItem>
+                                    )
+                                }
                             })}
 
                             {/*<UncontrolledDropdown nav inNavbar>*/}

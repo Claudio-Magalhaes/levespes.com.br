@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import PropTypes from 'prop-types';
-import {baseDeCores as cores} from '../../../_core/Variable'
+import {baseDeCores as cores, indexBaseCores as indexC} from '../../../_core/Variable'
 
 import '../../../assets/fonts/fonts.css'
 
@@ -55,9 +55,15 @@ ${props => (props.fontBold) ? 'font-weight: bold;': ''}
 
 H1.propTypes = {
     fontSize : PropTypes.string,
-    color: PropTypes.string,
+    color: PropTypes.oneOf([
+        'Branco',
+        'gelo',
+        'verdeAmarelado',
+        'verdeClaro',
+        'verdeEscuro'
+    ]),
     textAlign: PropTypes.string,
-    fontBold : PropTypes.boolean
+    fontBold : PropTypes.bool
 };
 
 H1.defaultProps = {
@@ -71,7 +77,7 @@ H2.propTypes = {
     fontSize : PropTypes.string,
     color: PropTypes.string,
     textAlign: PropTypes.string,
-    fontBold : PropTypes.boolean
+    fontBold : PropTypes.bool
 };
 
 H2.defaultProps = {
@@ -85,7 +91,7 @@ H3.propTypes = {
     fontSize : PropTypes.string,
     color: PropTypes.string,
     textAlign: PropTypes.string,
-    fontBold : PropTypes.boolean
+    fontBold : PropTypes.bool
 };
 
 H3.defaultProps = {
@@ -99,7 +105,7 @@ H4.propTypes = {
     fontSize : PropTypes.string,
     color: PropTypes.string,
     textAlign: PropTypes.string,
-    fontBold : PropTypes.boolean
+    fontBold : PropTypes.bool
 };
 
 H4.defaultProps = {
@@ -113,7 +119,7 @@ H5.propTypes = {
     fontSize : PropTypes.string,
     color: PropTypes.string,
     textAlign: PropTypes.string,
-    fontBold : PropTypes.boolean
+    fontBold : PropTypes.bool
 };
 
 H5.defaultProps = {
@@ -127,7 +133,7 @@ H6.propTypes = {
     fontSize : PropTypes.string,
     color: PropTypes.string,
     textAlign: PropTypes.string,
-    fontBold : PropTypes.boolean
+    fontBold : PropTypes.bool
 };
 
 H6.defaultProps = {

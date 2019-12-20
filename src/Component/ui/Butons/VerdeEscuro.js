@@ -12,7 +12,14 @@ const checkHover = (cor) => {
 const VerdeEscuro = (prop) => {
     return (
         <>
-            <BtnVerdeEscuro hover={checkHover(prop.hover)} outline={true}>{prop.children}</BtnVerdeEscuro>
+            <BtnVerdeEscuro
+
+                hover={checkHover(prop.hover)}
+                outline={true}
+
+            >
+                {prop.children}
+            </BtnVerdeEscuro>
         </>
     );
 };
