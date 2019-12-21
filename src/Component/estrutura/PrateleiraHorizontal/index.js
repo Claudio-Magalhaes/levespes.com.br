@@ -7,9 +7,9 @@ import serv1 from '../../../assets/image/bgTeste1.jpg';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import {Button, Card, CardBody, CardImg, CardText, CardTitle} from "reactstrap";
-import CardSubtitle from "reactstrap/es/CardSubtitle";
 
 import CardServicos  from "../../../Component/ui/Card/CardServicos";
+import CardProdutos  from "../../../Component/ui/Card/CardProdutos";
 
 // One item component
 // selected prop will be passed
@@ -20,14 +20,16 @@ const Tratamentos = ({ title, text, img, id, duracao }) => {
 };
 
 const Produtos = ({ title, text, img, id }) => {
+    console.log(img);
     return (
-        <section className='cardServicos col-sm-1 col-4 '>
-            <CardImg className='cardImgServicos' top width="100%" src={img} alt="Card image cap" />
-            <CardBody className='cardServBody'>
-                <CardTitle>{title}</CardTitle>
-                <Button>Button</Button>
-            </CardBody>
-        </section>
+        <CardProdutos data={{ title, text, img, id }}/>
+        // {/*<section className='cardServicos col-sm-1 col-4 '>*/}
+        // {/*    <CardImg className='cardImgServicos' top width="100%" src={img} alt="Card image cap" />*/}
+        // {/*    <CardBody className='cardServBody'>*/}
+        // {/*        <CardTitle>{title}</CardTitle>*/}
+        // {/*        <Button>Button</Button>*/}
+        // {/*    </CardBody>*/}
+        // {/*</section>*/}
     );
 };
 

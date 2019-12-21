@@ -25,7 +25,7 @@ export default class Home extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            listServicos:  [
+            listServicos: [
                 {
                     title: 'Massagem I',
                     text: "Some quick example text to build on the card title and make up the bulk of...",
@@ -367,7 +367,7 @@ export default class Home extends React.Component{
                 <div id='Container7' className='container-fluid'>
                     <h4>Veja També</h4>
                     <h3>Produtos Disponíveis</h3>
-                    {/*<PrateleiraHorizontal list={this.state.listProdutos} tipo={'produtos'}/>*/}
+                    <PrateleiraHorizontal list={this.state.listProdutos} tipo={'produtos'}/>
                 </div>
             </>
         );
