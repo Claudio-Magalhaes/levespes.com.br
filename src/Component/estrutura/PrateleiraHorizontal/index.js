@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import ScrollMenu from 'react-horizontal-scrolling-menu';
 import './style.css';
 
-import serv1 from '../../../assets/image/bgTeste1.jpg';
-
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import {Button, Card, CardBody, CardImg, CardText, CardTitle} from "reactstrap";

@@ -14,10 +14,18 @@ import './style.css'
 import 'animate.css'
 import ScrollMagic from "scrollmagic";
 
-import { baseDeCores as cores} from '../../_core/Variable'
+import {
+    Container6
+} from '../../assets/css/pages/Home'
+
+import {
+    VerdeEscuro as BtnVerdeEscuro
+} from '../../Component/ui/Butons/VerdeEscuro'
+
+import {baseDeCores as cores } from '../../_core/Variable'
 
 import { CardBeneficios } from '../../Component/ui/Card/CardBeneficios'
-import { H1 } from '../../Component/ui/Title'
+import { H1, H2, H3 } from '../../Component/ui/Title'
 
 
 
@@ -275,7 +283,7 @@ export default class Home extends React.Component{
             <>
                 <Header/>
                 <ContainerBranco>
-                    <H1>UM PÓUCO SOBRE A PODOLOGIA</H1>
+                    <H1 color={cores.verdeEscuro}>UM PÓUCO SOBRE A PODOLOGIA</H1>
                     <p style={{textAlign: "justify"}}>
                         Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
                     </p>
@@ -345,7 +353,7 @@ export default class Home extends React.Component{
                     </div>
                 </div>
 
-                <div id='Container6' className='container-fluid'>
+                <Container6 className='container-fluid'>
                     <div className='row'>
 
                         <div id='teste' style={{backgroundImage: 'url("'+bg6+'")'}} className='col-md-7 pt-auto mb-auto'>
@@ -354,14 +362,15 @@ export default class Home extends React.Component{
 
                         <div className='col-md-5'>
 
-                            <H1  fontSize={'4rem'} className='showCont6' color={'white'}>Estamos Pertinho!</H1>
-                            <p className='mt-3 tteste' style={{textAlign: "justify"}}>
-
-                            </p>
-
+                            <H1 fontSize={'4rem'} className='showCont6' color={cores.verdeEscuro}>Estamos Pertinho!</H1>
+                            <H2 fontBold={true} fontSize={'2.75rem'} className='showCont6' color={cores.verdeEscuro}>Edifício Menezes Cortes (Edifício Garagem)</H2>
+                            <H3 fontBold={true} fontSize={'2rem'}> Rua São José - N: 35 - Loja 104</H3>
+                            <H3 fontBold={true} fontSize={'2rem'}> Centro, Rio de Janeiro, RJ</H3>
+                            <H3 fontBold={true} fontSize={'2rem'}> Venha nos visitar</H3>
+                            <BtnVerdeEscuro hover='verdeAmarelado'> Ver no Mapa </BtnVerdeEscuro>
                         </div>
                     </div>
-                </div>
+                </Container6>
 
 
                 <div id='Container7' className='container-fluid'>

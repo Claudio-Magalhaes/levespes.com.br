@@ -21,3 +21,9 @@
     padding: 20px;
     cursor: pointer;
 }
+
+@media (max-width: 767px) {
+    .scroll-menu-arrow {
+        display: none;
+    }
+}

@@ -31,9 +31,9 @@ height: 35rem;
     Layout para celulares e telas SM
 */
 @media (max-width: 767px) {
-max-width: 18rem;
-margin-left: auto;
-margin-right: auto;
+max-width: 21rem;
+margin-left: 1rem;
+margin-right: 1rem;
 padding: 0px;
 
 img{
