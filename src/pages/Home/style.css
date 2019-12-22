@@ -26,9 +26,9 @@
     height: auto;
 }
 
-#Container6 {
-    height: 500px;
-    background: #497c4c;
+.fontColorBlack {
+    transition-delay: 0.5s;
+    color: #497C4C !important;
 }
 
 #Container7 {

@@ -15,7 +15,8 @@ import 'animate.css'
 import ScrollMagic from "scrollmagic";
 
 import {
-    Container6
+    Container6,
+    Cont6Span
 } from '../../assets/css/pages/Home'
 
 import {
@@ -25,7 +26,7 @@ import {
 import {baseDeCores as cores } from '../../_core/Variable'
 
 import { CardBeneficios } from '../../Component/ui/Card/CardBeneficios'
-import { H1, H2, H3 } from '../../Component/ui/Title'
+import {H1, H2, H3, H4} from '../../Component/ui/Title'
 
 
 
@@ -269,7 +270,7 @@ export default class Home extends React.Component{
         new ScrollMagic.Scene({
             triggerElement: '#Container6'
         })
-            .setClassToggle(".showCont6", "animated pulse hide show")
+            .setClassToggle(".showCont6", "animated pulse hide show fontColorBlack")
             .addTo(this.controller);
     };
 
@@ -282,6 +283,7 @@ export default class Home extends React.Component{
         return(
             <>
                 <Header/>
+
                 <ContainerBranco>
                     <H1 color={cores.verdeEscuro}>UM PÓUCO SOBRE A PODOLOGIA</H1>
                     <p style={{textAlign: "justify"}}>
@@ -311,15 +313,6 @@ export default class Home extends React.Component{
                                 </CardBeneficios>
                             ))}
 
-                            {/*<div className="col-md-4 col-lg-4">*/}
-                            {/*    <div className="imgCardContainer3 alignAll-center ml-auto mr-auto mb-2">*/}
-                            {/*        v*/}
-                            {/*    </div>*/}
-
-                            {/*    <h4 className="service-heading pt-2">E-Commerce</h4>*/}
-                            {/*    <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>*/}
-                            {/*</div>*/}
-
 
                         </div>
                     </div>
@@ -348,12 +341,12 @@ export default class Home extends React.Component{
 
                     <PrateleiraHorizontal list={this.state.listServicos} tipo={'tratamento'}/>
 
-                    <div className='alignAll-center mt-5'>
-                        <h2>Ver Todos os nossos Tratamentos</h2>
+                    <div className='alignAll-center mt-3 mb-3'>
+                        <H2 fontSize={'3rem'}>Ver Todos os nossos Tratamentos</H2>
                     </div>
                 </div>
 
-                <Container6 className='container-fluid'>
+                <Container6 id="Container6" className='container-fluid'>
                     <div className='row'>
 
                         <div id='teste' style={{backgroundImage: 'url("'+bg6+'")'}} className='col-md-7 pt-auto mb-auto'>
@@ -364,18 +357,18 @@ export default class Home extends React.Component{
 
                             <H1 fontSize={'4rem'} className='showCont6' color={cores.verdeEscuro}>Estamos Pertinho!</H1>
                             <H2 fontBold={true} fontSize={'2.75rem'} className='showCont6' color={cores.verdeEscuro}>Edifício Menezes Cortes (Edifício Garagem)</H2>
-                            <H3 fontBold={true} fontSize={'2rem'}> Rua São José - N: 35 - Loja 104</H3>
-                            <H3 fontBold={true} fontSize={'2rem'}> Centro, Rio de Janeiro, RJ</H3>
-                            <H3 fontBold={true} fontSize={'2rem'}> Venha nos visitar</H3>
+
+                            <Cont6Span className='showCont6' fontBold={true} fontSize={'2rem'}> Rua São José - N: 35 - Loja 104</Cont6Span>
+                            <Cont6Span className='showCont6' fontBold={true} fontSize={'2rem'}> Centro, Rio de Janeiro, RJ</Cont6Span>
+                            <Cont6Span className='showCont6' fontBold={true} fontSize={'2rem'}> Venha nos visitar</Cont6Span>
                             <BtnVerdeEscuro hover='verdeAmarelado'> Ver no Mapa </BtnVerdeEscuro>
                         </div>
                     </div>
                 </Container6>
 
 
-                <div id='Container7' className='container-fluid'>
-                    <h4>Veja També</h4>
-                    <h3>Produtos Disponíveis</h3>
+                <div id='Container7' className='container-fluid mt-3'>
+                    <H4 fontBold={true} fontSize={'3rem'}>Produtos disponíveis em nossa loja</H4>
                     <PrateleiraHorizontal list={this.state.listProdutos} tipo={'produtos'}/>
                 </div>
             </>
