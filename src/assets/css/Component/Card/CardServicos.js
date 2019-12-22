@@ -6,7 +6,7 @@ import {
     CardImg as CardImgR,
     CardText as CardTextR,
     CardTitle,
-    CardSubtitle,
+    CardSubtitle as CardSubtitleR,
     Button
 } from 'reactstrap';
 
@@ -19,6 +19,11 @@ export {
     CardSubtitle,
     Button
 };
+
+const CardSubtitle = styled(CardSubtitleR)`
+height: 30px;
+max-height: 100% !important;
+`;
 
 
 const Card = styled(CardR)`

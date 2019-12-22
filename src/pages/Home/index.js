@@ -341,9 +341,6 @@ export default class Home extends React.Component{
 
                     <PrateleiraHorizontal list={this.state.listServicos} tipo={'tratamento'}/>
 
-                    <div className='alignAll-center mt-3 mb-3'>
-                        <H2 fontSize={'3rem'}>Ver Todos os nossos Tratamentos</H2>
-                    </div>
                 </div>
 
                 <Container6 id="Container6" className='container-fluid'>
@@ -355,7 +352,7 @@ export default class Home extends React.Component{
 
                         <div className='col-md-5'>
 
-                            <H1 fontSize={'4rem'} className='showCont6' color={cores.verdeEscuro}>Estamos Pertinho!</H1>
+                            <H1 fontSize={'4rem'} className='showCont6' color={""}>Estamos Pertinho!</H1>
                             <H2 fontBold={true} fontSize={'2.75rem'} className='showCont6' color={cores.verdeEscuro}>Edifício Menezes Cortes (Edifício Garagem)</H2>
 
                             <Cont6Span className='showCont6' fontBold={true} fontSize={'2rem'}> Rua São José - N: 35 - Loja 104</Cont6Span>

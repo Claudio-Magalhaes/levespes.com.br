@@ -22,13 +22,6 @@ const Produtos = ({ title, text, img, id }) => {
     console.log(img);
     return (
         <CardProdutos data={{ title, text, img, id }}/>
-        // {/*<section className='cardServicos col-sm-1 col-4 '>*/}
-        // {/*    <CardImg className='cardImgServicos' top width="100%" src={img} alt="Card image cap" />*/}
-        // {/*    <CardBody className='cardServBody'>*/}
-        // {/*        <CardTitle>{title}</CardTitle>*/}
-        // {/*        <Button>Button</Button>*/}
-        // {/*    </CardBody>*/}
-        // {/*</section>*/}
     );
 };
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    CardBody, CardSubtitle, Button
+    CardBody, Button
 } from 'reactstrap';
 
 import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
@@ -9,7 +9,8 @@ import {
     CardImg,
     CardText,
     Card,
-    BtnCard
+    BtnCard,
+    CardSubtitle
 } from '../../../assets/css/Component/Card/CardServicos';
 
 import {baseDeCores as cores} from '../../../_core/Variable'
@@ -39,9 +40,12 @@ const CardServicos = (prop) => {
                 </H1>
                 <CardSubtitle>
                     <H4
-                        color={cores.verdeAmarelado}
+                        color='verdeAmarelado'
                         fontBold={true}
-                    >{prop.data.duracao} <AccessAlarmIcon/></H4>
+                        fontSize={'18pt'}
+                    >
+                        {prop.data.duracao} <AccessAlarmIcon/>
+                    </H4>
                 </CardSubtitle>
                 <CardText cssModule={{backgroundColor : 'red'}} >{prop.data.text}</CardText>
                 <BtnCard>

@@ -1,59 +1,156 @@
-import styled from 'styled-components'
+import React from "react";
 import PropTypes from 'prop-types';
-import {baseDeCores as cores, indexBaseCores as indexC} from '../../../_core/Variable'
 
-import '../../../assets/fonts/fonts.css'
+import {
+    H1 as H1Css,
+    H2 as H2Css,
+    H3 as H3Css,
+    H4 as H4Css,
+    H5 as H5Css,
+    H6 as H6Css
+} from '../../../assets/css/Component/Title'
+import {baseDeCores as cores} from "../../../_core/Variable";
 
-export const H1 = styled.h1`
-font-family: "Tall Abbey Sans Regular";
-color: ${props => props.color};
-${props => (props.fontSize === null) ? '' : `font-size: ${props.fontSize};`};
-text-align: ${props => props.textAlign};
-${props => (props.fontBold) ? 'font-weight: bold;': ''}
-`;
+export {
+    H1,
+    H2,
+    H3,
+    H4,
+    H5,
+    H6
+}
 
-export const H2 = styled.h2`
-font-family: "Tall Abbey Sans Regular";
-color: ${props => props.color};
-${props => (props.fontSize === null) ? '' : `font-size: ${props.fontSize};`};
-text-align: ${props => props.textAlign};
-${props => (props.fontBold) ? 'font-weight: bold;': ''}
-`;
+let prop = '';
 
-export const H3 = styled.h3`
-font-family: "Tall Abbey Sans Regular";
-color: ${props => props.color};
-${props => (props.fontSize === null) ? '' : `font-size: ${props.fontSize};`};
-text-align: ${props => props.textAlign};
-${props => (props.fontBold) ? 'font-weight: bold;': ''}
-`;
+const SelectColor = (cod) => {
 
-export const H4 = styled.h4`
-font-family: "Tall Abbey Sans Regular";
-color: ${props => props.color};
-${props => (props.fontSize === null) ? '' : `font-size: ${props.fontSize};`};
-text-align: ${props => props.textAlign};
-${props => (props.fontBold) ? 'font-weight: bold;': ''}
-`;
+    return cores[cod]
 
-export const H5 = styled.h5`
-font-family: "Tall Abbey Sans Regular";
-color: ${props => props.color};
-${props => (props.fontSize === null) ? '' : `font-size: ${props.fontSize};`};
-text-align: ${props => props.textAlign};
-${props => (props.fontBold) ? 'font-weight: bold;': ''}
-`;
+};
 
-export const H6 = styled.h6`
-font-family: "Tall Abbey Sans Regular";
-color: ${props => props.color};
-${props => (props.fontSize === null) ? '' : `font-size: ${props.fontSize};`};
-text-align: ${props => props.textAlign};
-${props => (props.fontBold) ? 'font-weight: bold;': ''}
-`;
+const H1 = (props) => {
+
+    prop = props;
+
+    return (
+        <H1Css
+            classNames={props.className}
+            style={props.style}
+            key={props.key}
+            id={props.id}
+            fontSize={props.fontSize}
+            color={SelectColor(props.color)}
+            textAlign={props.textAlign}
+            fontBold={props.fontBold}
+        >{props.children}</H1Css>
+    )
+
+};
+
+const H2 = (props) => {
+
+    prop = props;
+
+    return (
+        <H2Css
+            classNames={props.className}
+            style={props.style}
+            key={props.key}
+            id={props.id}
+            fontSize={props.fontSize}
+            color={SelectColor(props.color)}
+            textAlign={props.textAlign}
+            fontBold={props.fontBold}
+        >{props.children}</H2Css>
+    )
+
+};
+
+const H3 = (props) => {
+
+    prop = props;
+
+    return (
+        <H3Css
+            classNames={props.className}
+            style={props.style}
+            key={props.key}
+            id={props.id}
+            fontSize={props.fontSize}
+            color={SelectColor(props.color)}
+            textAlign={props.textAlign}
+            fontBold={props.fontBold}
+        >{props.children}</H3Css>
+    )
+
+};
+
+const H4 = (props) => {
+
+    prop = props;
+
+        return (
+        <H4Css
+            classNames={props.className}
+            style={props.style}
+            key={props.key}
+            id={props.id}
+            fontSize={props.fontSize}
+            color={SelectColor(props.color)}
+            textAlign={props.textAlign}
+            fontBold={props.fontBold}
+        >{props.children}</H4Css>
+    )
+
+};
+
+const H5 = (props) => {
+
+    prop = props;
+
+        return (
+        <H5Css
+            classNames={props.className}
+            style={props.style}
+            key={props.key}
+            id={props.id}
+            fontSize={props.fontSize}
+            color={SelectColor(props.color)}
+            textAlign={props.textAlign}
+            fontBold={props.fontBold}
+        >{props.children}</H5Css>
+    )
+
+};
+
+const H6 = (props) => {
+
+    prop = props;
+
+        return (
+        <H6Css
+            classNames={props.className}
+            style={props.style}
+            key={props.key}
+            id={props.id}
+            fontSize={props.fontSize}
+            color={SelectColor(props.color)}
+            textAlign={props.textAlign}
+            fontBold={props.fontBold}
+        >{props.children}</H6Css>
+    )
+
+};
+
+//=========================================
+//=========================================
 
 
 H1.propTypes = {
+    classNames: PropTypes.string,
+    style: PropTypes.object,
+    key: PropTypes.string,
+    id: PropTypes.object,
     fontSize : PropTypes.string,
     color: PropTypes.oneOf([
         'Branco',
@@ -70,12 +167,25 @@ H1.defaultProps = {
     fontSize : null,
     color: cores.verdeEscuro,
     textAlign: 'center',
-    fontBold: false
+    fontBold: false,
+    className: null,
+    key: null,
+    id: null
 };
 
 H2.propTypes = {
+    classNames: PropTypes.string,
+    style: PropTypes.object,
+    key: PropTypes.string,
+    id: PropTypes.object,
     fontSize : PropTypes.string,
-    color: PropTypes.string,
+    color: PropTypes.oneOf([
+        'Branco',
+        'gelo',
+        'verdeAmarelado',
+        'verdeClaro',
+        'verdeEscuro'
+    ]),
     textAlign: PropTypes.string,
     fontBold : PropTypes.bool
 };
@@ -84,12 +194,25 @@ H2.defaultProps = {
     fontSize : null,
     color: cores.verdeEscuro,
     textAlign: 'center',
-    fontBold: false
+    fontBold: false,
+    className: null,
+    key: null,
+    id: null
 };
 
 H3.propTypes = {
+    classNames: PropTypes.string,
+    style: PropTypes.object,
+    key: PropTypes.string,
+    id: PropTypes.object,
     fontSize : PropTypes.string,
-    color: PropTypes.string,
+    color: PropTypes.oneOf([
+        'Branco',
+        'gelo',
+        'verdeAmarelado',
+        'verdeClaro',
+        'verdeEscuro'
+    ]),
     textAlign: PropTypes.string,
     fontBold : PropTypes.bool
 };
@@ -98,12 +221,25 @@ H3.defaultProps = {
     fontSize : null,
     color: cores.verdeEscuro,
     textAlign: 'center',
-    fontBold: false
+    fontBold: false,
+    className: null,
+    key: null,
+    id: null
 };
 
 H4.propTypes = {
+    classNames: PropTypes.string,
+    style: PropTypes.object,
+    key: PropTypes.string,
+    id: PropTypes.object,
     fontSize : PropTypes.string,
-    color: PropTypes.string,
+    color: PropTypes.oneOf([
+        'Branco',
+        'gelo',
+        'verdeAmarelado',
+        'verdeClaro',
+        'verdeEscuro'
+    ]),
     textAlign: PropTypes.string,
     fontBold : PropTypes.bool
 };
@@ -112,12 +248,25 @@ H4.defaultProps = {
     fontSize : null,
     color: cores.verdeEscuro,
     textAlign: 'center',
-    fontBold: false
+    fontBold: false,
+    className: null,
+    key: null,
+    id: null
 };
 
 H5.propTypes = {
+    classNames: PropTypes.string,
+    style: PropTypes.object,
+    key: PropTypes.string,
+    id: PropTypes.object,
     fontSize : PropTypes.string,
-    color: PropTypes.string,
+    color: PropTypes.oneOf([
+        'Branco',
+        'gelo',
+        'verdeAmarelado',
+        'verdeClaro',
+        'verdeEscuro'
+    ]),
     textAlign: PropTypes.string,
     fontBold : PropTypes.bool
 };
@@ -126,12 +275,25 @@ H5.defaultProps = {
     fontSize : null,
     color: cores.verdeEscuro,
     textAlign: 'center',
-    fontBold: false
+    fontBold: false,
+    className: null,
+    key: null,
+    id: null
 };
 
 H6.propTypes = {
+    classNames: PropTypes.string,
+    style: PropTypes.object,
+    key: PropTypes.string,
+    id: PropTypes.object,
     fontSize : PropTypes.string,
-    color: PropTypes.string,
+    color: PropTypes.oneOf([
+        'Branco',
+        'gelo',
+        'verdeAmarelado',
+        'verdeClaro',
+        'verdeEscuro'
+    ]),
     textAlign: PropTypes.string,
     fontBold : PropTypes.bool
 };
@@ -140,5 +302,8 @@ H6.defaultProps = {
     fontSize : null,
     color: cores.verdeEscuro,
     textAlign: 'center',
-    fontBold: false
+    fontBold: false,
+    className: null,
+    key: null,
+    id: null
 };
