@@ -8,6 +8,7 @@ import {Button, Card, CardBody, CardImg, CardText, CardTitle} from "reactstrap";
 
 import CardServicos  from "../../../Component/ui/Card/CardServicos";
 import CardProdutos  from "../../../Component/ui/Card/CardProdutos";
+import {H3} from "../../ui/Title";
 
 // One item component
 // selected prop will be passed
@@ -96,13 +97,24 @@ class Index extends Component {
         const menu = Menu(this.props.list, this.props.tipo);
 
         return (
-            <div style={{height: 'auto'}}>
-                <ScrollMenu
-                    data={menu}
-                    arrowLeft={ArrowLeft}
-                    arrowRight={ArrowRight}
-                    alignCenter={false}
-                />
+            <div>
+                <div style={{height: 'auto'}}>
+                    <ScrollMenu
+                        data={menu}
+                        arrowLeft={ArrowLeft}
+                        arrowRight={ArrowRight}
+                        alignCenter={false}
+                    />
+                </div>
+                 <div className='mt-4 mb-3'>
+                     {(this.props.tipo === 'tratamento')?
+                         <a href='/tratamentos'>
+                             <H3>Veja Todos os Tratamentos</H3>
+                         </a>
+                     :
+                         null
+                     }
+                 </div>
             </div>
         );
     }

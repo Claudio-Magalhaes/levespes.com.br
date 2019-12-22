@@ -198,9 +198,6 @@ export default class Single extends React.Component{
 
                     <PrateleiraHorizontal list={this.state.listServicos} tipo={'tratamento'}/>
 
-                    <div className='alignAll-center mt-5'>
-                        <h2>Ver Todos os nossos Tratamentos</h2>
-                    </div>
 
                 </Container>
 
