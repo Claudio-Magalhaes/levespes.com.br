@@ -20,9 +20,6 @@ import {
     IconEmail
 } from '../../assets/css/pages/Tratamentos/Single/Icons'
 
-import WhatsAppIcon from '@material-ui/icons/WhatsApp';
-import PhoneIcon from '@material-ui/icons/Phone';
-import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import PopoverHeader from "reactstrap/es/PopoverHeader";
 import PopoverBody from "reactstrap/es/PopoverBody";
 import UncontrolledPopover from "reactstrap/lib/UncontrolledPopover";

@@ -8,6 +8,14 @@ export {
 
 const CardBeneficios = styled.div`
 
+/*
+    Layout para celulares e telas SM
+*/
+@media (max-width: 767px) {
+ margin-left: 10% !important;
+ margin-right: auto !important;
+}
+
   .CircImgCardContainer3{
     border-radius: 100%;
     min-height: 8rem;

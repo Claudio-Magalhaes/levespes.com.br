@@ -42,6 +42,7 @@ margin-right: 1rem;
 padding: 0px;
 
 img{
+height: 18rem;
 max-height: 18rem;
 }
 
@@ -61,6 +62,7 @@ height: 5.5rem;
 }
 
 img{
+height: 13.5rem;
 max-height: 13.5rem;
 }
 }
@@ -79,6 +81,7 @@ height: 5.5rem;
 }
 
 img{
+height: 16rem;
 max-height: 16rem;
 }
 

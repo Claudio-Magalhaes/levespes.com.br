@@ -1,15 +1,13 @@
-#teste{
-    height: 500px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+
+.animatedHide{
+    visibility: hidden;
 }
 
-#Container3{
-
+.animatedHide.animated{
+    visibility: visible;
 }
 
-.fontColorBlack{
+.Containet3{
 
 }
 
@@ -19,20 +17,8 @@
     border-bottom: 5px solid rgba(198, 235, 191, 1);
 }
 
-/*.imgCardContainer3{*/
-/*    border-radius: 100%;*/
-/*    min-height: 8rem !important;*/
-/*    width: 8rem !important;*/
-/*    background: #83ca86;*/
-/*}*/
-
 #Container5{
     height: auto;
-}
-
-.fontColorBlack {
-    transition-delay: 0.5s;
-    color: #497C4C !important;
 }
 
 #Container7 {

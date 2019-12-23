@@ -91,7 +91,7 @@ class Index extends Component {
 
         return (
             <div>
-                <div style={{height: 'auto'}}>
+                <div className={this.props.className} style={{height: 'auto'}}>
                     <ScrollMenu
                         data={menu}
                         arrowLeft={ArrowLeft}

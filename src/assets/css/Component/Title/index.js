@@ -5,7 +5,7 @@ import {baseDeCores as cores, indexBaseCores as indexC} from '../../../../_core/
 import '../../../fonts/fonts.css'
 
 export const H1 = styled.h1`
-font-family: "Tall Abbey Sans Regular" !important;
+font-family: "Amatic SC", "Montserrat";
 color: ${props => props.color};
 ${props => (props.fontSize === null) ? '' : `font-size: ${props.fontSize};`};
 text-align: ${props => props.textAlign};
@@ -13,7 +13,7 @@ ${props => (props.fontBold) ? 'font-weight: bold;': ''}
 `;
 
 export const H2 = styled.h2`
-font-family: "Tall Abbey Sans Regular";
+font-family: "Amatic SC", "Montserrat";
 color: ${props => props.color};
 ${props => (props.fontSize === null) ? '' : `font-size: ${props.fontSize};`};
 text-align: ${props => props.textAlign};
@@ -21,7 +21,7 @@ ${props => (props.fontBold) ? 'font-weight: bold;': ''}
 `;
 
 export const H3 = styled.h3`
-font-family: "Tall Abbey Sans Regular";
+font-family: "Amatic SC", "Montserrat";
 color: ${props => props.color};
 ${props => (props.fontSize === null) ? '' : `font-size: ${props.fontSize};`};
 text-align: ${props => props.textAlign};
@@ -29,7 +29,7 @@ ${props => (props.fontBold) ? 'font-weight: bold;': ''}
 `;
 
 export const H4 = styled.h4`
-font-family: "Tall Abbey Sans Regular";
+font-family: "Amatic SC", "Montserrat";
 color: ${props => props.color};
 ${props => (props.fontSize === null) ? '' : `font-size: ${props.fontSize};`};
 text-align: ${props => props.textAlign};
@@ -37,7 +37,7 @@ ${props => (props.fontBold) ? 'font-weight: bold;': ''}
 `;
 
 export const H5 = styled.h5`
-font-family: "Tall Abbey Sans Regular";
+font-family: "Amatic SC", "Montserrat";
 color: ${props => props.color};
 ${props => (props.fontSize === null) ? '' : `font-size: ${props.fontSize};`};
 text-align: ${props => props.textAlign};
@@ -45,7 +45,7 @@ ${props => (props.fontBold) ? 'font-weight: bold;': ''}
 `;
 
 export const H6 = styled.h6`
-font-family: "Tall Abbey Sans Regular";
+font-family: "Amatic SC", "Montserrat";
 color: ${props => props.color};
 ${props => (props.fontSize === null) ? '' : `font-size: ${props.fontSize};`};
 text-align: ${props => props.textAlign};

@@ -17,7 +17,6 @@ margin-left: auto;
 
 h1{
 min-width: 100%;
-font-family: "Tall Abbey Sans Regular";
 font-weight: 600;
 line-height: 1.3em;
 margin-top: 0.6667em;

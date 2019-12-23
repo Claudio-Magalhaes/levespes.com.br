@@ -3,13 +3,26 @@
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
+
+@font-face {
+  font-family: "Tall Abbey Sans Regular";
+  src: url("./assets/fonts/TallAbbeySansRg.otf");
+}
+
 body {
   overflow-x: hidden;
-  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:  "Amatic", "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: rgba(251, 245, 247, 0.35) !important;
+
+  --Branco: #F3EDEF;
+  --gelo: #EEE2D6;
+  --verdeAmarelado: #B2BF4B;
+  --verdeClaro: #C6EBBF;
+  --verdeEscuro: #497C4C;
 }
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: trajan;
+  font-family: "Amatic", "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center;
 }
 
