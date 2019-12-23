@@ -23,7 +23,6 @@ import {
     VerdeEscuro as BtnVerdeEscuro
 } from '../../Component/ui/Butons/VerdeEscuro'
 
-import {baseDeCores as cores } from '../../_core/Variable'
 
 import { CardBeneficios } from '../../Component/ui/Card/CardBeneficios'
 import {H1, H2, H3, H4} from '../../Component/ui/Title'
@@ -222,7 +221,8 @@ export default class Home extends React.Component{
                     text: 'Proporcionar relaxamento, alivio a tensão, dores e estresse, causando sensação de alívio,' +
                         'leveza e bem estar.'
                 },
-            ]
+            ],
+            animate: {}
         };
 
         this.controller = new ScrollMagic.Controller();
@@ -240,15 +240,15 @@ export default class Home extends React.Component{
                 } else elem.className += ' ' + classname;
             }
         };
-        ScrollMagic._util.removeClass = function _patchedRemoveClass(elem, classname) {
-            if (classname) {
-                if (elem.classList) {
-                    classname.split(' ').forEach(function _removeCls(c) {
-                        elem.classList.remove(c);
-                    });
-                } else elem.className = elem.className.replace(new RegExp('(^|\b)' + classname.split(' ').join('|') + '(\b|$)', 'gi'), ' ');
-            }
-        };
+        // ScrollMagic._util.removeClass = function _patchedRemoveClass(elem, classname) {
+        //     if (classname) {
+        //         if (elem.classList) {
+        //             classname.split(' ').forEach(function _removeCls(c) {
+        //                 elem.classList.remove(c);
+        //             });
+        //         } else elem.className = elem.className.replace(new RegExp('(^|\b)' + classname.split(' ').join('|') + '(\b|$)', 'gi'), ' ');
+        //     }
+        // };
 
         this.animate();
 
@@ -267,10 +267,25 @@ export default class Home extends React.Component{
     }
 
     animate = () => {
+
+        //Container 2
         new ScrollMagic.Scene({
-            triggerElement: '#Container6'
+            triggerElement: '.cont2Header'
         })
-            .setClassToggle(".showCont6", "animated pulse hide show fontColorBlack")
+            .setClassToggle(".cont2Header", "animated bounceInLeft")
+            .addTo(this.controller);
+
+        new ScrollMagic.Scene({
+            triggerElement: '.container2'
+        })
+            .setClassToggle(".cont2Text", "animated bounceInRight")
+            .addTo(this.controller);
+
+
+        new ScrollMagic.Scene({
+            triggerElement: '#container6'
+        })
+            .setClassToggle(".showCont6", "animated pulse")
             .addTo(this.controller);
     };
 
@@ -278,17 +293,21 @@ export default class Home extends React.Component{
         alert('ok');
     };
 
+
     render() {
 
         return(
             <>
                 <Header/>
 
-                <ContainerBranco>
-                    <H1 color={cores.verdeEscuro}>UM PÓUCO SOBRE A PODOLOGIA</H1>
-                    <p style={{textAlign: "justify"}}>
-                        Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
-                    </p>
+                <ContainerBranco id='container2'>
+
+                    <div className='container2'>
+                        <H1  className={'cont2Header'} color='verdeEscuro'>UM PÓUCO SOBRE A PODOLOGIA</H1>
+                        <p className='cont2Text' style={{textAlign: "justify"}}>
+                            Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
+                        </p>
+                    </div>
 
                 </ContainerBranco>
 
@@ -352,8 +371,8 @@ export default class Home extends React.Component{
 
                         <div className='col-md-5'>
 
-                            <H1 fontSize={'4rem'} className='showCont6' color={""}>Estamos Pertinho!</H1>
-                            <H2 fontBold={true} fontSize={'2.75rem'} className='showCont6' color={cores.verdeEscuro}>Edifício Menezes Cortes (Edifício Garagem)</H2>
+                            <H1 fontSize={'4rem'} className='showCont6'>Estamos Pertinho!</H1>
+                            <H2 fontBold={true} fontSize={'2.75rem'} className='showCont6'>Edifício Menezes Cortes (Edifício Garagem)</H2>
 
                             <Cont6Span className='showCont6' fontBold={true} fontSize={'2rem'}> Rua São José - N: 35 - Loja 104</Cont6Span>
                             <Cont6Span className='showCont6' fontBold={true} fontSize={'2rem'}> Centro, Rio de Janeiro, RJ</Cont6Span>

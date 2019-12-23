@@ -34,7 +34,7 @@ const H1 = (props) => {
 
     return (
         <H1Css
-            classNames={props.className}
+            className={props.className}
             style={props.style}
             key={props.key}
             id={props.id}
@@ -53,7 +53,7 @@ const H2 = (props) => {
 
     return (
         <H2Css
-            classNames={props.className}
+            className={props.className}
             style={props.style}
             key={props.key}
             id={props.id}
@@ -72,7 +72,7 @@ const H3 = (props) => {
 
     return (
         <H3Css
-            classNames={props.className}
+            className={props.className}
             style={props.style}
             key={props.key}
             id={props.id}
@@ -91,7 +91,7 @@ const H4 = (props) => {
 
         return (
         <H4Css
-            classNames={props.className}
+            className={props.className}
             style={props.style}
             key={props.key}
             id={props.id}
@@ -110,7 +110,7 @@ const H5 = (props) => {
 
         return (
         <H5Css
-            classNames={props.className}
+            className={props.className}
             style={props.style}
             key={props.key}
             id={props.id}
@@ -129,7 +129,7 @@ const H6 = (props) => {
 
         return (
         <H6Css
-            classNames={props.className}
+            className={props.className}
             style={props.style}
             key={props.key}
             id={props.id}
@@ -147,7 +147,7 @@ const H6 = (props) => {
 
 
 H1.propTypes = {
-    classNames: PropTypes.string,
+    className: PropTypes.string,
     style: PropTypes.object,
     key: PropTypes.string,
     id: PropTypes.object,
@@ -165,7 +165,7 @@ H1.propTypes = {
 
 H1.defaultProps = {
     fontSize : null,
-    color: cores.verdeEscuro,
+    color: 'verdeEscuro',
     textAlign: 'center',
     fontBold: false,
     className: null,
@@ -174,7 +174,7 @@ H1.defaultProps = {
 };
 
 H2.propTypes = {
-    classNames: PropTypes.string,
+    className: PropTypes.string,
     style: PropTypes.object,
     key: PropTypes.string,
     id: PropTypes.object,
@@ -192,7 +192,7 @@ H2.propTypes = {
 
 H2.defaultProps = {
     fontSize : null,
-    color: cores.verdeEscuro,
+    color: 'verdeEscuro',
     textAlign: 'center',
     fontBold: false,
     className: null,
@@ -201,7 +201,7 @@ H2.defaultProps = {
 };
 
 H3.propTypes = {
-    classNames: PropTypes.string,
+    className: PropTypes.string,
     style: PropTypes.object,
     key: PropTypes.string,
     id: PropTypes.object,
@@ -219,7 +219,7 @@ H3.propTypes = {
 
 H3.defaultProps = {
     fontSize : null,
-    color: cores.verdeEscuro,
+    color: 'verdeEscuro',
     textAlign: 'center',
     fontBold: false,
     className: null,
@@ -228,7 +228,7 @@ H3.defaultProps = {
 };
 
 H4.propTypes = {
-    classNames: PropTypes.string,
+    className: PropTypes.string,
     style: PropTypes.object,
     key: PropTypes.string,
     id: PropTypes.object,
@@ -246,7 +246,7 @@ H4.propTypes = {
 
 H4.defaultProps = {
     fontSize : null,
-    color: cores.verdeEscuro,
+    color: 'verdeEscuro',
     textAlign: 'center',
     fontBold: false,
     className: null,
@@ -255,7 +255,7 @@ H4.defaultProps = {
 };
 
 H5.propTypes = {
-    classNames: PropTypes.string,
+    className: PropTypes.string,
     style: PropTypes.object,
     key: PropTypes.string,
     id: PropTypes.object,
@@ -273,7 +273,7 @@ H5.propTypes = {
 
 H5.defaultProps = {
     fontSize : null,
-    color: cores.verdeEscuro,
+    color: 'verdeEscuro',
     textAlign: 'center',
     fontBold: false,
     className: null,
@@ -282,7 +282,7 @@ H5.defaultProps = {
 };
 
 H6.propTypes = {
-    classNames: PropTypes.string,
+    className: PropTypes.string,
     style: PropTypes.object,
     key: PropTypes.string,
     id: PropTypes.object,
@@ -300,7 +300,7 @@ H6.propTypes = {
 
 H6.defaultProps = {
     fontSize : null,
-    color: cores.verdeEscuro,
+    color: 'verdeEscuro',
     textAlign: 'center',
     fontBold: false,
     className: null,
