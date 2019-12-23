@@ -5,7 +5,7 @@ import {baseDeCores as cores, indexBaseCores as indexC} from '../../../../_core/
 import '../../../fonts/fonts.css'
 
 export const H1 = styled.h1`
-font-family: "Tall Abbey Sans Regular";
+font-family: "Tall Abbey Sans Regular" !important;
 color: ${props => props.color};
 ${props => (props.fontSize === null) ? '' : `font-size: ${props.fontSize};`};
 text-align: ${props => props.textAlign};

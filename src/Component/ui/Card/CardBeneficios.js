@@ -8,14 +8,21 @@ export {
 
 const CardBeneficios = styled.div`
 
+  .CircImgCardContainer3{
+    border-radius: 100%;
+    min-height: 8rem;
+    width: 8rem;
+    background: #83ca86;
+  }
+
   .imgCardContainer3 {
     border-radius: 100%;
     min-height: 8rem;
     width: 8rem;
-    // background-image: url("${props => (props.bg === null) ? '' : props.bg}");
-    ${props => (props.bg === null) ? 'background: #83ca86;' : 'background-image: url("${props.bg}");'}
-
-    ;
+    background-image: url("${props => props.bg}");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
   }
 `;
 

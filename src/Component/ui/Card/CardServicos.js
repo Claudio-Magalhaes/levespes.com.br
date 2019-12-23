@@ -35,6 +35,7 @@ const CardServicos = (prop) => {
             <CardBody>
                 <H1
                     fontBold={true}
+                    fontSize={'200%'}
                 >
                     {prop.data.title}
                 </H1>

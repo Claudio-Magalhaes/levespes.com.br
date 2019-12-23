@@ -23,6 +23,12 @@ import {
     VerdeEscuro as BtnVerdeEscuro
 } from '../../Component/ui/Butons/VerdeEscuro'
 
+import Calosidade from '../../assets/image/Home_Beneficios/Calosidade.png'
+import Fissuras from '../../assets/image/Home_Beneficios/Fissuras.png'
+import Micose from '../../assets/image/Home_Beneficios/Micose.png'
+import UnhaEncravada from '../../assets/image/Home_Beneficios/Unha-encravada.png'
+import Ortese from '../../assets/image/Home_Beneficios/Ortese.png'
+import Beneficios from '../../assets/image/Home_Beneficios/Beneficios.png'
 
 import { CardBeneficios } from '../../Component/ui/Card/CardBeneficios'
 import {H1, H2, H3, H4} from '../../Component/ui/Title'
@@ -184,6 +190,7 @@ export default class Home extends React.Component{
             listBeneficios: [
                 {
                     titulo: 'Fissura',
+                    img: Fissuras,
                     text: 'Fissura é o ressecamento da pele acentuada, com hiperqueratose, perda da elasticidade da' +
                         'pele, que pode atingir os tecidos profundos levando ao sangramento.' +
                         'Tratamento; remoção do excesso de céculas mortas, lixamento e hidratação com cremes e' +
@@ -191,6 +198,7 @@ export default class Home extends React.Component{
                 },
                 {
                     titulo: 'Órtese',
+                    img: Ortese,
                     text: 'Dispositivo com fibra molecular (FMM) para correção de unha encravada ou atrofiada.' +
                         'Tratamento; profilaxia e remoção de calo sub ungueal (embaixo da unha), é trocado a cada 30' +
                         'dias, em média 6 trocas dependendo da evolução do crescimento da unha hidratação da' +
@@ -198,18 +206,21 @@ export default class Home extends React.Component{
                 },
                 {
                     titulo: 'Unha encravada',
+                    img: UnhaEncravada,
                     text: 'Onicocriptose (unha encravada), eritema (vermelhidão), dor e edema (inchaço).' +
                         'Tratamento; Remoção da espícula, aplicação de alta frequência para acelerar a cicatrização,' +
                         'curativo e orientações.'
                 },
                 {
                     titulo: 'Calosidade',
+                    img: Calosidade,
                     text: 'É o espessamento da pele devido ao excesso de pressão continua no local.' +
                         'Tratamento; realizar a remoção da calosidade lixando, hidratando e orientações para cuidados' +
                         'domiciliares.'
                 },
                 {
                     titulo: 'Micose (Onicomicose)',
+                    img: Micose,
                     text: 'A unha é acometida por fungo, modificando seu aspecto, cor, espessamento, odor e leito' +
                         'ungueal.' +
                         'Tratamento; consiste em limpeza do local afetado, remoção da laceração sob a lâmina, corte' +
@@ -218,6 +229,7 @@ export default class Home extends React.Component{
                 },
                 {
                     titulo: 'Benefícios',
+                    img: Beneficios,
                     text: 'Proporcionar relaxamento, alivio a tensão, dores e estresse, causando sensação de alívio,' +
                         'leveza e bem estar.'
                 },
@@ -322,9 +334,11 @@ export default class Home extends React.Component{
                         <div className="row text-center">
 
                             {this.state.listBeneficios.map(d => (
-                                <CardBeneficios key={'beneficios-'+d.titulo} bg={null} className="col-md-4 col-lg-4">
-                                    <div className=" imgCardContainer3 alignAll-center ml-auto mr-auto mb-2">
+                                <CardBeneficios key={'beneficios-'+d.titulo} bg={d.img} className="col-md-4 col-lg-4">
+                                    <div className='CircImgCardContainer3 alignAll-center ml-auto mr-auto mb-2'>
+                                        <div className=" imgCardContainer3 alignAll-center ml-auto mr-auto mb-2">
 
+                                        </div>
                                     </div>
 
                                     <h4 className="service-heading pt-2">{d.titulo}</h4>
