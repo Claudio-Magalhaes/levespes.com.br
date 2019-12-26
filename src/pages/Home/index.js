@@ -278,8 +278,8 @@ export default class Home extends React.Component{
 
     animate = () => {
 
-        //Container 2
-        //==============================================
+        // Container 2
+        // ==============================================
         new ScrollMagic.Scene({
             triggerElement: '.cont2Header'
         })
@@ -305,7 +305,7 @@ export default class Home extends React.Component{
         //Container 4
         //==============================================
         new ScrollMagic.Scene({
-            triggerElement: '.showCont4Title'
+            triggerElement: '#Container4'
         })
             .setClassToggle(".showCont4Title", "animated zoomInDown")
             .addTo(this.controller);
