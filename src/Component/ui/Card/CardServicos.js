@@ -3,6 +3,8 @@ import {
     CardBody, Button
 } from 'reactstrap';
 
+import {stringTrunc} from "../../../_core/Functions/stringTrunc";
+
 import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
 
 import {
@@ -30,7 +32,7 @@ alert(id);
 
 const CardServicos = (prop) => {
     return (
-        <Card>
+        <Card key={'tratamentos-'+prop.data.id}>
             <CardImg className='cardImgServicos' top width="100%" src={prop.data.img} alt="Card image cap" {...prop.props} />
             <CardBody>
                 <H1
@@ -48,7 +50,7 @@ const CardServicos = (prop) => {
                         {prop.data.duracao} <AccessAlarmIcon/>
                     </H4>
                 </CardSubtitle>
-                <CardText cssModule={{backgroundColor : 'red'}} >{prop.data.text}</CardText>
+                <CardText cssModule={{backgroundColor : 'red'}} >{stringTrunc(prop.data.text, 40)}</CardText>
                 <BtnCard>
                     <a href={'/Tratamentos/'+prop.data.id}>
                         <BtnVerdeEscuro hover='verdeAmarelado'> Ver Tratamento </BtnVerdeEscuro>

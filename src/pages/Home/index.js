@@ -35,12 +35,6 @@ import UnhaEncravada from '../../assets/image/Home_Beneficios/Unha_encravada.png
 import Ortese from '../../assets/image/Home_Beneficios/Ortese.png'
 import Beneficios from '../../assets/image/Home_Beneficios/Beneficios.png'
 
-import massagem1 from '../../assets/image/exemplos/servicos/massagem1.jpg';
-import massagem2 from '../../assets/image/exemplos/servicos/massagem2.jpg';
-import pacoteDeTerapia from '../../assets/image/exemplos/servicos/pacoteDeTerapia.jpg';
-import hidratacaoExclusiva from '../../assets/image/exemplos/servicos/hidratacaoExclusiva.jpg';
-import infantil from '../../assets/image/exemplos/servicos/infantil.jpg';
-
 import { CardBeneficios } from '../../Component/ui/Card/CardBeneficios'
 import {H1, H2, H3, H4} from '../../Component/ui/Title'
 
@@ -50,154 +44,6 @@ export default class Home extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            listServicos: [
-                {
-                    title: 'Massagem I',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: massagem1,
-                    duracao: '01:40 Hs',
-                    id: '1'
-                },
-                {
-                    title: 'Massagem II',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: massagem2,
-                    duracao: '00:40 Hs',
-                    id: '2'
-                },
-                {
-                    title: 'Pacote de Terapias II',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: pacoteDeTerapia,
-                    duracao: '00:40 Hs',
-                    id: '3'
-                },
-                {
-                    title: 'Hidratação Exclusiva',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: hidratacaoExclusiva,
-                    duracao: '00:40 Hs',
-                    id: '4'
-                },
-                {
-                    title: 'Corte de Unhas',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '5'
-                },
-                {
-                    title: 'Convencional',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '6'
-                },
-                {
-                    title: 'Infantil',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: infantil,
-                    duracao: '00:40 Hs',
-                    id: '7'
-                },
-                {
-                    title: 'Órtese',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '8'
-                },
-                {
-                    title: 'Exclusivo',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '9'
-                },
-                {
-                    title: 'Unha Encravada',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '10'
-                },
-                {
-                    title: 'Cauterização e Curativos',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '11'
-                },
-                {
-                    title: 'Pacote de Terapias I',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '12'
-                }
-            ],
-            listProdutos: [
-                {
-                    title: 'Serviço 1',
-                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-                    img: serv1,
-                    id: '1'
-                },
-                {
-                    title: 'Serviço 2',
-                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-                    img: serv1,
-                    id: '2'
-                },
-                {
-                    title: 'Serviço 3',
-                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-                    img: serv1,
-                    id: '3'
-                },
-                {
-                    title: 'Serviço 4',
-                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-                    img: serv1,
-                    id: '4'
-                },
-                {
-                    title: 'Serviço 5',
-                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-                    img: serv1,
-                    id: '5'
-                },
-                {
-                    title: 'Serviço 6',
-                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-                    img: serv1,
-                    id: '6'
-                },
-                {
-                    title: 'Serviço 7',
-                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-                    img: serv1,
-                    id: '7'
-                },
-                {
-                    title: 'Serviço 8',
-                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-                    img: serv1,
-                    id: '8'
-                },
-                {
-                    title: 'Serviço 9',
-                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-                    img: serv1,
-                    id: '9'
-                },
-                {
-                    title: 'Serviço 10',
-                    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-                    img: serv1,
-                    id: '10'
-                },
-            ],
             listBeneficios: [
                 {
                     titulo: 'Fissura',
@@ -411,7 +257,7 @@ export default class Home extends React.Component{
 
                 <div id='Container5' className='container-fluid mt-5'>
 
-                    <PrateleiraHorizontal className='showCont5 animatedHide' list={this.state.listServicos} tipo={'tratamento'}/>
+                    <PrateleiraHorizontal className='showCont5 animatedHide' list={this.props.data.tratamentos()} tipo={'tratamento'}/>
 
                 </div>
 
@@ -444,7 +290,7 @@ export default class Home extends React.Component{
 
                 <div id='Container7' className='container-fluid mt-3 showCont7 animatedHide'>
                     <H4 fontBold={true} fontSize={'3rem'}>Produtos disponíveis em nossa loja</H4>
-                    <PrateleiraHorizontal list={this.state.listProdutos} tipo={'produtos'}/>
+                    <PrateleiraHorizontal list={this.props.data.produtos()} tipo={'produtos'}/>
                 </div>
             </>
         );

@@ -11,94 +11,9 @@ export default class Tratamento extends React.Component{
     constructor(props) {
         super(props);
         this.state ={
-            listServicos:  [
-                {
-                    title: 'Massagem I',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '01:40 Hs',
-                    id: '1'
-                },
-                {
-                    title: 'Massagem II',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '2'
-                },
-                {
-                    title: 'Pacote de Terapias II',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '3'
-                },
-                {
-                    title: 'Hidratação Exclusiva',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '4'
-                },
-                {
-                    title: 'Corte de Unhas',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '5'
-                },
-                {
-                    title: 'Convencional',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '6'
-                },
-                {
-                    title: 'Infantil',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '7'
-                },
-                {
-                    title: 'Órtese',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '8'
-                },
-                {
-                    title: 'Exclusivo',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '9'
-                },
-                {
-                    title: 'Unha Encravada',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '10'
-                },
-                {
-                    title: 'Cauterização e Curativos',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '11'
-                },
-                {
-                    title: 'Pacote de Terapias I',
-                    text: "Some quick example text to build on the card title and make up the bulk of...",
-                    img: serv1,
-                    duracao: '00:40 Hs',
-                    id: '12'
-                }
-            ]
         }
     }
+
 
     render() {
 
@@ -107,7 +22,7 @@ export default class Tratamento extends React.Component{
                 <Container className='mt-5 pt-5'>
                     <div className='row'>
 
-                        {this.state.listServicos.map(s =>(
+                        {this.props.data.tratamentos().map(s =>(
                             <>
                                 <CardServicos data={s} />
                             </>
