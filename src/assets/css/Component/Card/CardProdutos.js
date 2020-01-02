@@ -3,39 +3,31 @@ import PropTypes from 'prop-types';
 
 import {
     Card as CardR,
-    CardImg as CardImgR,
-    CardText as CardTextR,
-    CardTitle,
-    CardSubtitle,
-    Button
+    CardImg as CardImgR
 } from 'reactstrap';
 
 export {
     Card,
-    CardImg,
-    BtnCard,
-    CardTitle,
-    CardSubtitle,
-    Button
+    CardImg
 };
-
 
 const Card = styled(CardR)`
 border-radius: 10px 10px 10px 10px;
 margin-bottom: 20px;
 white-space: normal !important;
-height: 20rem;
+height: 25rem;
 
 /*
     Layout para celulares e telas SM
 */
 @media (max-width: 767px) {
-max-width: 18rem;
-margin-left: auto;
-margin-right: auto;
+max-width: 21rem;
+margin-left: 1rem;
+margin-right: 1rem;
 padding: 0px;
 
 img{
+height: 18rem;
 max-height: 18rem;
 }
 
@@ -55,6 +47,7 @@ height: 5.5rem;
 }
 
 img{
+height: 13.5rem;
 max-height: 13.5rem;
 }
 }
@@ -73,7 +66,8 @@ height: 5.5rem;
 }
 
 img{
-max-height: 13rem;
+height: 16rem;
+max-height: 16rem;
 }
 
 }
@@ -81,9 +75,4 @@ max-height: 13rem;
 
 const CardImg = styled(CardImgR)`
 pointer-events: none
-`;
-
-const BtnCard = styled.div`
-display: flex;
-justify-content: center;
 `;

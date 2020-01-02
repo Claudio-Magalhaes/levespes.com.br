@@ -26,10 +26,6 @@ import {
     H4
 } from '../Title'
 
-function click(id){
-alert(id);
-}
-
 const CardServicos = (prop) => {
     return (
         <Card key={'tratamentos-'+prop.data.id}>

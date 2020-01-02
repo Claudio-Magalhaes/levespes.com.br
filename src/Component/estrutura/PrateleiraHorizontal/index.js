@@ -19,7 +19,6 @@ const Tratamentos = ({ title, text, img, id, duracao }) => {
 };
 
 const Produtos = ({ title, text, img, id }) => {
-    console.log(img);
     return (
         <CardProdutos data={{ title, text, img, id }}/>
     );

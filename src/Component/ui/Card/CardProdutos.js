@@ -3,21 +3,17 @@ import {
     CardBody
 } from 'reactstrap';
 
-import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
-
 import {
     CardImg,
-    Card,
-    BtnCard
+    Card
 } from '../../../assets/css/Component/Card/CardProdutos';
-
 import {
     H1
 } from '../Title'
 
 const CardProdutos = (prop) => {
     return (
-        <Card>
+        <Card key={'tratamentos-'+prop.data.id}>
             <CardImg className='cardImgServicos' top width="100%" src={prop.data.img} alt="Card image cap" {...prop.props} />
             <CardBody>
                 <H1
