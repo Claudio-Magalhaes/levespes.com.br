@@ -15,8 +15,12 @@ margin-top: 100px;
 `;
 
 const DivMap = styled.div`
+background-image: url("${props => props.background}");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
 height: 400px;
-background: #656565;
+//background: #656565;
 `;
 
 const DivEmail = styled.div`

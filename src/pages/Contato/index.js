@@ -9,6 +9,7 @@ import {H3} from "../../Component/ui/Title";
 import {Cont6Span} from "../../assets/css/pages/Home";
 import {Divider} from "../../Component/ui/Divider";
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import map from "../../assets/image/exemplos/map.png"
 
 class Contato extends React.Component{
     constructor(props) {
@@ -23,21 +24,11 @@ class Contato extends React.Component{
                 <Container>
                     <Row>
 
-                        <DivMap className='col-12'>
-                            <Map google={this.props.google} zoom={14}>
+                        <DivMap background={map} className='col-lg-6 col-md-6'>
 
-                                {/*<Marker onClick={this.onMarkerClick}*/}
-                                {/*        name={'Currentlocation'} />*/}
-
-                                {/*<InfoWindow onClose={this.onInfoWindowClose}>*/}
-                                {/*    <div>*/}
-                                {/*        <h1>{this.state.selectedPlace.name}</h1>*/}
-                                {/*    </div>*/}
-                                {/*</InfoWindow>*/}
-                            </Map>
                         </DivMap>
 
-                        <div className='col-12'>
+                        <div className='col-lg-6 col-md-6'>
                             <Cont6Span className='showCont6' fontBold={true} fontSize={'2rem'}> Rua São José - N: 35 - Loja 104 - Centro, Rio de Janeiro, RJ</Cont6Span>
                             <Cont6Span className='showCont6' fontBold={true} fontSize={'2rem'}> Centro, Rio de Janeiro, RJ</Cont6Span>
                             <Cont6Span className='showCont6' fontBold={true} fontSize={'2rem'}> Venha nos visitar</Cont6Span>
