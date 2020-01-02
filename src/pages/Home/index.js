@@ -44,6 +44,7 @@ export default class Home extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
+            mobile: true,
             listBeneficios: [
                 {
                     titulo: 'Fissura',
@@ -118,9 +119,20 @@ export default class Home extends React.Component{
         //     }
         // };
 
-        this.animate();
+        if(this.resizeFunction()){
+            this.animate();
+        }
 
     }
+
+    resizeFunction = () => {
+        if (window.innerWidth <= 540) {
+            this.setState({mobile: false});
+            return false;
+        }else{
+            return true;
+        }
+    };
 
     animate = () => {
 
@@ -194,6 +206,8 @@ export default class Home extends React.Component{
 
     render() {
 
+        let hide = (this.state.mobile === true) ? 'animatedHide' : '';
+
         return(
             <>
                 <Header/>
@@ -201,8 +215,8 @@ export default class Home extends React.Component{
                 <ContainerBranco id='container2'>
 
                     <div className='container2'>
-                        <H1  className={'cont2Header animatedHide'} color='verdeEscuro'>UM PÓUCO SOBRE A PODOLOGIA</H1>
-                        <p className='cont2Text animatedHide' style={{textAlign: "justify"}}>
+                        <H1  className={`cont2Header ${hide}`} color='verdeEscuro'>UM PÓUCO SOBRE A PODOLOGIA</H1>
+                        <p className={`cont2Text ${hide}`} style={{textAlign: "justify"}}>
                             Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
                         </p>
                     </div>
@@ -220,7 +234,7 @@ export default class Home extends React.Component{
                         <div className="row text-center">
 
                             {this.state.listBeneficios.map(d => (
-                                <CardBeneficios key={'beneficios-'+d.titulo} bg={d.img} className="col-md-4 col-lg-4 animatedHide showCont3">
+                                <CardBeneficios key={'beneficios-'+d.titulo} bg={d.img} className={`col-md-4 col-lg-4 ${hide} showCont3`}>
                                     <div className='CircImgCardContainer3 alignAll-center ml-auto mr-auto mb-2'>
                                         <div className=" imgCardContainer3 alignAll-center ml-auto mr-auto mb-2">
 
@@ -242,8 +256,8 @@ export default class Home extends React.Component{
                     <div className='row'>
                         <div className='col-md-6 mt-5 textBoxContainer4 hide'>
 
-                            <H1 fontSize='3rem' className='showCont4Title animatedHide'>Relação Tempo Benefício</H1>
-                            <p className='mt-3 ml-4 mr-2 showCont4Text animatedHide' style={{textAlign: "justify"}}>
+                            <H1 fontSize='3rem' className={`showCont4Title ${hide}`}>Relação Tempo Benefício</H1>
+                            <p className={`mt-3 ml-4 mr-2 showCont4Text ${hide}`} style={{textAlign: "justify"}}>
                                 Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
                             </p>
 
@@ -257,25 +271,25 @@ export default class Home extends React.Component{
 
                 <div id='Container5' className='container-fluid mt-5'>
 
-                    <PrateleiraHorizontal className='showCont5 animatedHide' list={this.props.data.tratamentos()} tipo={'tratamento'}/>
+                    <PrateleiraHorizontal className={`showCont5 ${hide}`} list={this.props.data.tratamentos()} tipo={'tratamento'}/>
 
                 </div>
 
                 <Container6 id="Container6" className='container-fluid'>
                     <div className='row'>
 
-                        <Container6Bg className='col-md-7 pt-auto mb-auto showCont6 animatedHide'>
+                        <Container6Bg className={`col-md-7 pt-auto mb-auto showCont6 ${hide}`}>
                             <img src={bg6} />
                         </Container6Bg>
 
                         <div className='divInfoCont6 col-md-5 mt-auto mb-auto'>
 
-                            <H1 fontBold={true} className='showCont6 animatedHide'>Estamos Pertinho!</H1>
-                            <H2 fontBold={true} className='showCont6 animatedHide'>Edifício Garagem Menezes Cortes</H2>
+                            <H1 fontBold={true} className={`showCont6 ${hide}`}>Estamos Pertinho!</H1>
+                            <H2 fontBold={true} className={`showCont6 ${hide}`}>Edifício Garagem Menezes Cortes</H2>
 
-                            <Cont6Span className='showCont6 animatedHide' fontBold={true} fontSize={'2rem'}> Rua São José - N: 35 - Loja 104</Cont6Span>
-                            <Cont6Span className='showCont6 animatedHide' fontBold={true} fontSize={'2rem'}> Centro, Rio de Janeiro, RJ</Cont6Span>
-                            <Cont6Span className='showCont6 animatedHide' fontBold={true} fontSize={'2rem'}> Venha nos visitar</Cont6Span>
+                            <Cont6Span className={`showCont6 ${hide}`} fontBold={true} fontSize={'2rem'}> Rua São José - N: 35 - Loja 104</Cont6Span>
+                            <Cont6Span className={`showCont6 ${hide}`} fontBold={true} fontSize={'2rem'}> Centro, Rio de Janeiro, RJ</Cont6Span>
+                            <Cont6Span className={`showCont6 ${hide}`} fontBold={true} fontSize={'2rem'}> Venha nos visitar</Cont6Span>
 
                             <div className='rowBtnCont6 row alignAll-center'>
                                 <BtnVerdeEscuro className='m-1' hover='verdeAmarelado'> Ver no Mapa </BtnVerdeEscuro>
@@ -288,7 +302,7 @@ export default class Home extends React.Component{
                 </Container6>
 
 
-                <div id='Container7' className='container-fluid mt-3 showCont7 animatedHide'>
+                <div id='Container7' className={`container-fluid mt-3 showCont7 ${hide}`}>
                     <H4 fontBold={true} fontSize={'3rem'}>Produtos disponíveis em nossa loja</H4>
                     <PrateleiraHorizontal list={this.props.data.produtos()} tipo={'produtos'}/>
                 </div>

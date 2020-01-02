@@ -26,6 +26,10 @@ import {
     H4
 } from '../Title'
 
+function click(id){
+alert(id);
+}
+
 const CardServicos = (prop) => {
     return (
         <Card key={'tratamentos-'+prop.data.id}>
@@ -46,7 +50,7 @@ const CardServicos = (prop) => {
                         {prop.data.duracao} <AccessAlarmIcon/>
                     </H4>
                 </CardSubtitle>
-                <CardText cssModule={{backgroundColor : 'red'}} >{stringTrunc(prop.data.text, 40)}</CardText>
+                <CardText>{stringTrunc(prop.data.text, '40')}</CardText>
                 <BtnCard>
                     <a href={'/Tratamentos/'+prop.data.id}>
                         <BtnVerdeEscuro hover='verdeAmarelado'> Ver Tratamento </BtnVerdeEscuro>

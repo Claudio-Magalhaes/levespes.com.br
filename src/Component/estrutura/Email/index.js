@@ -5,8 +5,7 @@ import './style.css'
 
 import { urlServer } from '../../../_core/Variable'
 import Axios from "axios";
-import Snackbar from "@material-ui/core/Snackbar";
-import SnackbarContent from "@material-ui/core/SnackbarContent";
+import { VerdeEscuro } from "../../ui/Butons/VerdeEscuro"
 
 export default class Email extends React.Component{
     constructor(props) {
@@ -71,8 +70,8 @@ export default class Email extends React.Component{
 
                             </div>
 
-                            <div className='alignAll-center mt-5'>
-
+                            <div className='alignAll-center mt-3'>
+                                <VerdeEscuro>Enviar</VerdeEscuro>
                             </div>
 
                         </form>

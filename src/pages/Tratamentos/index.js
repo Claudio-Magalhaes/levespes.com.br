@@ -5,7 +5,6 @@ import { ContainerBranco } from "../../Component/ui/Container/ContainerBranco";
 
 import {Container, Card, CardBody, CardImg, CardText, CardTitle} from "reactstrap";
 import CardServicos  from "../../Component/ui/Card/CardServicos";
-import serv1 from '../../assets/image/exemplos/servicos/serv1.jpg';
 
 export default class Tratamento extends React.Component{
     constructor(props) {
