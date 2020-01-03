@@ -2,3 +2,19 @@
     background: #4A8250;
     height: 300px;
 }
+
+.content-list-footer{
+    color: white;
+    max-height: 290px;
+    overflow: auto;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+.text-list-footer{
+    color: white;
+    white-space: nowrap;
+}
+.icon-list-footer{
+    color: white;
+}
