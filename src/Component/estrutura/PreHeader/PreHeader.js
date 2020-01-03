@@ -2,16 +2,9 @@ import React, { useState } from 'react';
 import {
     Collapse,
     Navbar,
-    NavbarToggler,
-    NavbarBrand,
     Nav,
     NavItem,
     NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    NavbarText
 } from 'reactstrap';
 
 import './styles.css'
@@ -19,8 +12,9 @@ import './styles.css'
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import PhoneIcon from '@material-ui/icons/Phone';
+import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
 
-const Example = (props) => {
+const PreHeader = (props) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => setIsOpen(!isOpen);
@@ -39,7 +33,10 @@ const Example = (props) => {
                             <NavLink className='PreHeader-link' href={null}><PhoneIcon/> (21) 2544-6337 / 98343-3908</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink className='PreHeader-link' href={null}><FacebookIcon/> Visite nossa Página</NavLink>
+                            <NavLink className='PreHeader-link' target='_blank' href={'https://www.facebook.com/LevesPesPodologia/'}><FacebookIcon/> Visite nossa Página</NavLink>
+                        </NavItem>
+                        <NavItem className='d-md-none d-sm-block d-lg-block'>
+                            <NavLink className='PreHeader-link' href={null}><AlternateEmailIcon/> contato@levespes.com.br</NavLink>
                         </NavItem>
                     </Nav>
                 </Collapse>
@@ -49,4 +46,4 @@ const Example = (props) => {
     );
 }
 
-export default Example;
+export default PreHeader;

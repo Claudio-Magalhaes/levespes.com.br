@@ -6,8 +6,9 @@ import './style.css'
 import { urlServer } from '../../../_core/Variable'
 import Axios from "axios";
 import { VerdeEscuro } from "../../ui/Butons/VerdeEscuro"
+import PropTypes from "prop-types";
 
-export default class Email extends React.Component{
+ class Email extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
@@ -18,7 +19,15 @@ export default class Email extends React.Component{
 
     }
 
-    onChange = (event) => {
+    componentDidMount() {
+        if(this.props.message !== null){
+            this.setState({
+                message: this.props.message
+            })
+        }
+    }
+
+     onChange = (event) => {
         const state  = Object.assign({}, this.state);
         const campo  = event.target.id;
         state[campo] = event.target.value;
@@ -33,6 +42,13 @@ export default class Email extends React.Component{
 
         if(response.data.status === true){
             alert('E-mail enviado.');
+
+            if(
+                typeof this.props.retorno === "function"
+            ){
+                this.props.retorno();
+            }
+
         }else{
             alert("Desculpe, erro ao enviar o E-mail.");
         }
@@ -85,3 +101,16 @@ export default class Email extends React.Component{
     }
 
 }
+
+
+Email.propTypes = {
+    retorno: PropTypes.func,
+    message: PropTypes.string
+};
+
+Email.defaultProps = {
+    retorno: null,
+    message: null
+};
+
+export default Email;

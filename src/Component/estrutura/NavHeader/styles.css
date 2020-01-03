@@ -5,6 +5,7 @@
     background: rgba(255,255,255,.7) !important;
     position: absolute;
     min-width: 100%;
+    z-index: 499;
 }
 
 #NavHeaderTransparente a {

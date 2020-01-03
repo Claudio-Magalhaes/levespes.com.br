@@ -39,7 +39,6 @@ import { CardBeneficios } from '../../Component/ui/Card/CardBeneficios'
 import {H1, H2, H3, H4} from '../../Component/ui/Title'
 
 
-
 export default class Home extends React.Component{
     constructor(props) {
         super(props);
@@ -123,7 +122,7 @@ export default class Home extends React.Component{
             this.animate();
         }
 
-    }
+    };
 
     resizeFunction = () => {
         if (window.innerWidth <= 540) {
@@ -150,7 +149,6 @@ export default class Home extends React.Component{
             .setClassToggle(".cont2Text", "animated bounceInRight")
             .addTo(this.controller);
 
-
         //Container 3
         //==============================================
         new ScrollMagic.Scene({
@@ -158,7 +156,6 @@ export default class Home extends React.Component{
         })
             .setClassToggle(".showCont3", "animated fadeInDown")
             .addTo(this.controller);
-
 
         //Container 4
         //==============================================
@@ -174,7 +171,6 @@ export default class Home extends React.Component{
             .setClassToggle(".showCont4Text", "animated zoomInDown")
             .addTo(this.controller);
 
-
         //Container 5
         //==============================================
         new ScrollMagic.Scene({
@@ -183,24 +179,21 @@ export default class Home extends React.Component{
             .setClassToggle(".showCont5", "animated bounceInRight")
             .addTo(this.controller);
 
-
         //Container 6
         //==============================================
         new ScrollMagic.Scene({
             triggerElement: '#Container6'
         })
-            .setClassToggle(".showCont6", "animated rubberBand")
+            .setClassToggle(".showCont6", "animated fadeInLeft")
             .addTo(this.controller);
-
 
         //Container 7
         //==============================================
         new ScrollMagic.Scene({
             triggerElement: '#Container7'
         })
-            .setClassToggle(".showCont7", "animated shake")
+            .setClassToggle(".showCont7", "animated fadeInRight")
             .addTo(this.controller);
-
 
     };
 
@@ -300,7 +293,6 @@ export default class Home extends React.Component{
                         </div>
                     </div>
                 </Container6>
-
 
                 <div id='Container7' className={`container-fluid mt-3 showCont7 ${hide}`}>
                     <H4 fontBold={true} fontSize={'3rem'}>Produtos disponíveis em nossa loja</H4>
