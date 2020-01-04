@@ -285,9 +285,9 @@ export default class Home extends React.Component{
                             <Cont6Span className={`showCont6 ${hide}`} fontBold={true} fontSize={'2rem'}> Venha nos visitar</Cont6Span>
 
                             <div className='rowBtnCont6 row alignAll-center'>
-                                <BtnVerdeEscuro className='m-1' hover='verdeAmarelado'> Ver no Mapa </BtnVerdeEscuro>
+                                <BtnVerdeEscuro className={`showCont6 mt-1 ${hide}`} hover='verdeAmarelado'> Ver no Mapa </BtnVerdeEscuro>
                                 <a href='/contato'>
-                                    <BtnVerdeEscuro className='m-1' hover='verdeAmarelado'> Ir a Contatos </BtnVerdeEscuro>
+                                    <BtnVerdeEscuro  className={`showCont6 mt-1 ${hide}`} hover='verdeAmarelado'> Ir a Contatos </BtnVerdeEscuro>
                                 </a>
                             </div>
                         </div>
