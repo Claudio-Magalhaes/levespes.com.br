@@ -285,7 +285,9 @@ export default class Home extends React.Component{
                             <Cont6Span className={`showCont6 ${hide}`} fontBold={true} fontSize={'2rem'}> Venha nos visitar</Cont6Span>
 
                             <div className='rowBtnCont6 row alignAll-center'>
-                                <BtnVerdeEscuro className={`showCont6 mt-1 ${hide}`} hover='verdeAmarelado'> Ver no Mapa </BtnVerdeEscuro>
+                                <a target='_blank' href="https://wego.here.com/directions/mix/mylocation/e-eyJuYW1lIjoiTGV2ZXMgUFx1MDBlOXMiLCJhZGRyZXNzIjoiUnVhIFNcdTAwZTNvIEpvc1x1MDBlOSAtIDM1IC0gTG9qYSAxMDQsIFJpbyBkZSBKYW5laXJvIiwibGF0aXR1ZGUiOi0yMi45MDUzMjk0LCJsb25naXR1ZGUiOi00My4xNzUzNTc5LCJwcm92aWRlck5hbWUiOiJmYWNlYm9vayIsInByb3ZpZGVySWQiOjEwMDQ4NzUwNDc5Njc3OX0=?map=-22.90533,-43.17536,15,normal&fb_locale=pt_BR">
+                                    <BtnVerdeEscuro className={`showCont6 mt-1 ${hide}`} hover='verdeAmarelado'> Ver no Mapa </BtnVerdeEscuro>
+                                </a>
                                 <a href='/contato'>
                                     <BtnVerdeEscuro  className={`showCont6 mt-1 ${hide}`} hover='verdeAmarelado'> Ir a Contatos </BtnVerdeEscuro>
                                 </a>

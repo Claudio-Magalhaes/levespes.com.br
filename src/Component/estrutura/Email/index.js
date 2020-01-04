@@ -8,7 +8,7 @@ import Axios from "axios";
 import { VerdeEscuro } from "../../ui/Butons/VerdeEscuro"
 import PropTypes from "prop-types";
 
- class Email extends React.Component{
+class Email extends React.Component{
     constructor(props) {
         super(props);
         this.state = {

@@ -1,6 +1,7 @@
 #Footer{
     background: #4A8250;
-    height: 300px;
+    min-height: 300px;
+    height: auto;
 }
 
 .content-list-footer{

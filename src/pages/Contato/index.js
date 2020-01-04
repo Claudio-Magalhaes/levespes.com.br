@@ -5,7 +5,7 @@ import Email from "../../Component/estrutura/Email";
 import Row from "reactstrap/es/Row";
 import Container from "reactstrap/es/Container";
 import {DivMap, DivMainContato, DivEmail} from "../../assets/css/pages/Contato";
-import {H3} from "../../Component/ui/Title";
+import {H1, H2, H3} from "../../Component/ui/Title";
 import {Cont6Span} from "../../assets/css/pages/Home";
 import {Divider} from "../../Component/ui/Divider";
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
@@ -24,14 +24,35 @@ class Contato extends React.Component{
                 <Container>
                     <Row>
 
-                        <DivMap background={map} className='col-lg-6 col-md-6'>
+                        <DivMap background={map} className='col-lg-6 col-md-12'>
 
                         </DivMap>
 
-                        <div className='col-lg-6 col-md-6'>
-                            <Cont6Span className='showCont6' fontBold={true} fontSize={'2rem'}> Rua São José - N: 35 - Loja 104 - Centro, Rio de Janeiro, RJ</Cont6Span>
-                            <Cont6Span className='showCont6' fontBold={true} fontSize={'2rem'}> Centro, Rio de Janeiro, RJ</Cont6Span>
-                            <Cont6Span className='showCont6' fontBold={true} fontSize={'2rem'}> Venha nos visitar</Cont6Span>
+                        <div className='col-lg-6 col-md-12 mt-md-2'>
+                            <H1
+                                color='verdeEscuro'
+                                textAlign='center'
+                                fontSize={true}
+                                fontBold={true}
+                            >
+                                Edifício Garagem Menezes Cortes
+                            </H1>
+                            <H3
+                                color='verdeEscuro'
+                                textAlign='center'
+                                fontSize={true}
+                                fontBold={true}
+                            >
+                                Rua São José - N: 35 - Loja 104 - Centro, Rio de Janeiro, RJ
+                            </H3>
+                            <H2
+                                color='verdeAmarelado'
+                                textAlign='center'
+                                fontSize={true}
+                                fontBold={true}
+                            >
+                                Aberto de Segunda a sexta, das 08:00Hs ás 19:00Hs
+                            </H2>
                         </div>
                     </Row>
                 </Container>
