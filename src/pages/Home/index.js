@@ -4,7 +4,6 @@ import Header from '../../Component/estrutura/Header'
 import { ContainerBranco } from '../../Component/ui/Container/ContainerBranco';
 
 import bgCont4 from '../../assets/image/bgCont4.jpg'
-import serv1 from '../../assets/image/exemplos/servicos/serv1.jpg';
 import bg6 from '../../assets/image/bgCont6-2.png'
 
 
@@ -98,6 +97,8 @@ export default class Home extends React.Component{
     }
 
     componentDidMount() {
+
+        this.props.data.pagesActive('Home');
 
         ScrollMagic._util.addClass = function _patchedAddClass(elem, classname) {
             if (classname) {
@@ -286,10 +287,10 @@ export default class Home extends React.Component{
 
                             <div className='rowBtnCont6 row alignAll-center'>
                                 <a target='_blank' href="https://wego.here.com/directions/mix/mylocation/e-eyJuYW1lIjoiTGV2ZXMgUFx1MDBlOXMiLCJhZGRyZXNzIjoiUnVhIFNcdTAwZTNvIEpvc1x1MDBlOSAtIDM1IC0gTG9qYSAxMDQsIFJpbyBkZSBKYW5laXJvIiwibGF0aXR1ZGUiOi0yMi45MDUzMjk0LCJsb25naXR1ZGUiOi00My4xNzUzNTc5LCJwcm92aWRlck5hbWUiOiJmYWNlYm9vayIsInByb3ZpZGVySWQiOjEwMDQ4NzUwNDc5Njc3OX0=?map=-22.90533,-43.17536,15,normal&fb_locale=pt_BR">
-                                    <BtnVerdeEscuro className={`showCont6 mt-1 ${hide}`} hover='verdeAmarelado'> Ver no Mapa </BtnVerdeEscuro>
+                                    <BtnVerdeEscuro className={`showCont6 m-1 ${hide}`} hover='verdeAmarelado'> Ver no Mapa </BtnVerdeEscuro>
                                 </a>
                                 <a href='/contato'>
-                                    <BtnVerdeEscuro  className={`showCont6 mt-1 ${hide}`} hover='verdeAmarelado'> Ir a Contatos </BtnVerdeEscuro>
+                                    <BtnVerdeEscuro  className={`showCont6 m-1 ${hide}`} hover='verdeAmarelado'> Ir a Contatos </BtnVerdeEscuro>
                                 </a>
                             </div>
                         </div>
@@ -303,5 +304,4 @@ export default class Home extends React.Component{
             </>
         );
     }
-
 }

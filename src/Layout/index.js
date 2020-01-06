@@ -32,13 +32,15 @@ import proGel from "../assets/image/exemplos/produtos/proGel.jpg";
 import proPaste from "../assets/image/exemplos/produtos/proPaste.jpg";
 import proSept from "../assets/image/exemplos/produtos/proSept.jpg";
 
+import "./Layout.css";
 
 export default class Layout extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            preloader : true
+            preloader : true,
+            pageActive: {}
         }
     }
 
@@ -213,6 +215,12 @@ export default class Layout extends React.Component {
         }
     };
 
+    pageActive = (pag) => {
+        this.setState({
+            pageActive: pag
+        })
+    };
+
     /**
      * Metodo de roteamento, é EXCLUSIVAMENTE atravéz desta função que as páginas serão executadas
      */
@@ -227,7 +235,8 @@ export default class Layout extends React.Component {
                             path={prop.path + prop.params}
                             render={(props) => <prop.component  {...props} data={{
                                 produtos : this.produtos,
-                                tratamentos: this.tratamentos
+                                tratamentos: this.tratamentos,
+                                pagesActive: this.pageActive
                             }}/>}
                             key={key}
                         />
@@ -239,7 +248,8 @@ export default class Layout extends React.Component {
                             path={prop.path + prop.params}
                             render={(props) => <prop.component  {...props} data={{
                                 produtos : this.produtos,
-                                tratamentos: this.tratamentos
+                                tratamentos: this.tratamentos,
+                                pagesActive: this.pageActive
                             }}/>}
                             key={key}
                         />
@@ -257,11 +267,21 @@ export default class Layout extends React.Component {
             <>
                 <PreHeader/>
 
-                <NavHeader router={routes} />
+                <NavHeader active={this.state.pageActive} router={routes} />
 
                 <div>{this.SwitchRoutes}</div>
 
                 <Footer/>
+                <div id='copyrightFooter' className='alignAll-center'>
+                    <p style={{color: 'white', fontSize: '0.8rem'}}>
+                        © Copyright 2020 - Feito com amor pela <a
+                        href={'https://eato.com.br/'}
+                        target='_blank'
+                    >
+                        EATO.
+                    </a>
+                    </p>
+                </div>
             </>
         );
     }

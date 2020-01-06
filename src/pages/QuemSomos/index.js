@@ -1,6 +1,5 @@
 import React from "react";
 
-import Header from '../../Component/estrutura/Header'
 import { ContainerBranco } from '../../Component/ui/Container/ContainerBranco';
 import atavar from "../../assets/image/exemplos/avatar.png"
 
@@ -12,6 +11,10 @@ export default class QuemSomos extends React.Component{
     constructor(props) {
         super(props);
 
+    }
+
+    componentDidMount() {
+        this.props.data.pagesActive('Quem Somos');
     }
 
     render() {

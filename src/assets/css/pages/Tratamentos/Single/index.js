@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types';
 import PopoverHeaderR from "reactstrap/es/PopoverHeader";
 import PopoverBodyR from "reactstrap/es/PopoverBody";
-import { Col } from 'reactstrap';
+import { Row } from 'reactstrap';
 
 export {
     Img,
@@ -26,10 +26,15 @@ const PopoverBody = styled(PopoverBodyR)`
 background-color: rgba(149,255,156,0.02);
 `;
 
-const Valor = styled(Col)`
+const Valor = styled(Row)`
 position: absolute;
 width: 95%;
 height: 20%;
 bottom: 0;
 margin-bottom: 5px;
+
+@media (max-width: 540px) {
+position: relative;
+height: auto;
+}
 `;

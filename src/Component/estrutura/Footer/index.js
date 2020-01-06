@@ -2,7 +2,7 @@ import React from "react";
 import {Container, Row, Col, NavLink} from 'reactstrap';
 
 import './style.css'
-import {H1, H2} from "../../../assets/css/Component/Title";
+import {H1, H2} from "../../ui/Title";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListSubheader from "@material-ui/core/ListSubheader";
@@ -15,6 +15,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import PhoneIcon from '@material-ui/icons/Phone';
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
 
+
 export const Footer = () => (
     <div id='Footer' className='card-footer'>
         <Container>
@@ -26,20 +27,32 @@ export const Footer = () => (
                         aria-labelledby="nested-list-subheader"
                         subheader={
                             <ListSubheader component="div" id="nested-list-subheader">
-                                <H2 color={'white'}>Tratamentos</H2>
+                                <H2 color='Branco'>Tratamentos</H2>
                             </ListSubheader>
                         }
                     >
-                        <ListItem div>
+                        <ListItem button>
+                            <ListItemIcon className='icon-list-footer  d-lg-block d-sm-none d-md-none'>
+                                <></>
+                            </ListItemIcon>
                             <ListItemText className='text-list-footer'>Hidratação Exclusiva</ListItemText>
                         </ListItem>
-                        <ListItem div>
+                        <ListItem button>
+                            <ListItemIcon className='icon-list-footer d-lg-block d-sm-none d-md-none'>
+                                <></>
+                            </ListItemIcon>
                             <ListItemText className='text-list-footer'>Órtese</ListItemText>
                         </ListItem>
-                        <ListItem div>
+                        <ListItem button>
+                            <ListItemIcon className='icon-list-footer d-lg-block d-sm-none d-md-none'>
+                                <></>
+                            </ListItemIcon>
                             <ListItemText className='text-list-footer'>Infantil</ListItemText>
                         </ListItem>
-                        <ListItem div>
+                        <ListItem button>
+                            <ListItemIcon className='icon-list-footer d-lg-block d-sm-none d-md-none'>
+                                <></>
+                            </ListItemIcon>
                             <ListItemText className='text-list-footer'>Cauterização e Curativos</ListItemText>
                         </ListItem>
 
@@ -53,20 +66,33 @@ export const Footer = () => (
                         aria-labelledby="nested-list-subheader"
                         subheader={
                             <ListSubheader component="div" id="nested-list-subheader">
-                                <H2 color={'white'}>Produtos</H2>
+                                <H2 color='Branco'>Produtos</H2>
                             </ListSubheader>
                         }
                     >
-                        <ListItem div>
+                        <ListItem button>
+                            <ListItemIcon className='icon-list-footer d-lg-block d-sm-none d-md-none'>
+                                <></>
+                            </ListItemIcon>
                             <ListItemText className='text-list-footer'>EsfoliarDerm</ListItemText>
                         </ListItem>
-                        <ListItem div>
+
+                        <ListItem button>
+                            <ListItemIcon className='icon-list-footer d-lg-block d-sm-none d-md-none'>
+                                <></>
+                            </ListItemIcon>
                             <ListItemText className='text-list-footer'>HydraDerm</ListItemText>
                         </ListItem>
-                        <ListItem div>
+                        <ListItem button>
+                            <ListItemIcon className='icon-list-footer d-lg-block d-sm-none d-md-none'>
+                                <></>
+                            </ListItemIcon>
                             <ListItemText className='text-list-footer'>Hydra M</ListItemText>
                         </ListItem>
-                        <ListItem div>
+                        <ListItem button>
+                            <ListItemIcon className='icon-list-footer d-lg-block d-sm-none d-md-none'>
+                                <></>
+                            </ListItemIcon>
                             <ListItemText className='text-list-footer'>KeraDerm</ListItemText>
                         </ListItem>
 
@@ -79,11 +105,11 @@ export const Footer = () => (
                         aria-labelledby="nested-list-subheader"
                         subheader={
                             <ListSubheader component="div" id="nested-list-subheader">
-                                <H2 color={'white'}>Nossos Contatos</H2>
+                                <H2 color='Branco'>Nossos Contatos</H2>
                             </ListSubheader>
                         }
                     >
-                        <ListItem div>
+                        <ListItem button>
                             <ListItemIcon className='icon-list-footer'>
                                 <WhatsAppIcon style={{color: 'white'}}/>
                             </ListItemIcon>

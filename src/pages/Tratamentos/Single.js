@@ -1,23 +1,14 @@
 import React from "react";
-import classnames from 'classnames'
 import {
     Container,
-    TabContent,
-    TabPane,
-    Nav,
-    NavItem,
-    NavLink,
-    Card,
-    Button,
-    CardTitle,
-    CardText,
     Row,
     Col,
     Modal,
     ModalHeader,
-    ModalBody,
-    ModalFooter
+    ModalBody
 } from 'reactstrap';
+
+import {baseDeCores as cores} from '../../_core/Variable';
 
 // TESTE OU EXEMPLOS
 import {
@@ -42,6 +33,7 @@ import {
 import UncontrolledPopover from "reactstrap/lib/UncontrolledPopover";
 import {Divider} from "../../Component/ui/Divider";
 import Email from "../../Component/estrutura/Email";
+import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
 
 export default class Single extends React.Component{
     constructor(props){
@@ -53,6 +45,8 @@ export default class Single extends React.Component{
     }
 
     componentDidMount() {
+
+        this.props.data.pagesActive('Tratamentos');
 
         let id = this.props.match.params.id;
 
@@ -86,7 +80,7 @@ export default class Single extends React.Component{
                             <Col lg='5' md='6' sm="12">
                                 <Img src={this.state.trat.img}/>
                             </Col>
-                            <Col lg='7' md='6' sm="12">
+                            <Col lg='7' md='6' sm="12" cssModule={{height: 'auto'}}>
 
                                 <H1>{this.state.trat.title}</H1>
 
@@ -94,7 +88,23 @@ export default class Single extends React.Component{
                                     {this.state.trat.text}
                                 </p>
                                 <Valor lg='12' md='12' sm='12'>
-                                    <H1 fontSize={'3rem'} fontBold={true} textAlign='right'>R$:{this.state.trat.valor}</H1>
+                                    <Col md={6} lg={6} sm={12} className={'karalho'}>
+                                        <H1
+                                            color='verdeAmarelado'
+                                            fontBold={true}
+                                            fontSize={'2.3rem'}
+                                        >
+                                            <AccessAlarmIcon
+                                                style={{fontSize: '2.5rem', color: cores.verdeAmarelado}}
+                                            />
+                                              {this.state.trat.duracao}
+                                        </H1>
+                                    </Col>
+                                    <Col md={6} lg={6} sm={12} className={'karalho2'}>
+                                        <H1 fontSize={'2.3rem'} fontBold={true} textAlign='right'>
+                                            R$:{this.state.trat.valor}
+                                        </H1>
+                                    </Col>
                                 </Valor>
                             </Col>
                         </Row>

@@ -1,12 +1,14 @@
 import styled from 'styled-components'
 import PropTypes from 'prop-types';
+import ListItemText from "@material-ui/core/ListItemText";
 
 import {baseDeCores as cores} from '../../../../_core/Variable'
 
 export {
     DivMap,
     DivMainContato,
-    DivEmail
+    DivEmail,
+    Contatos
 }
 
 
@@ -25,4 +27,8 @@ height: 400px;
 
 const DivEmail = styled.div`
 margin-top: 25px;
+`;
+
+const Contatos = styled(ListItemText)`
+color: ${cores.verdeEscuro} !important;
 `;

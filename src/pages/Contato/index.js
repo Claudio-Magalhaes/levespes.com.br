@@ -1,19 +1,40 @@
 import React from "react";
 
-import Header from '../../Component/estrutura/Header'
+import {DivMap,
+    DivMainContato,
+    DivEmail,
+    Contatos
+} from "../../assets/css/pages/Contato";
+
+import {baseDeCores as cores} from '../../_core/Variable'
+
 import Email from "../../Component/estrutura/Email";
 import Row from "reactstrap/es/Row";
 import Container from "reactstrap/es/Container";
-import {DivMap, DivMainContato, DivEmail} from "../../assets/css/pages/Contato";
 import {H1, H2, H3} from "../../Component/ui/Title";
-import {Cont6Span} from "../../assets/css/pages/Home";
+
 import {Divider} from "../../Component/ui/Divider";
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import {GoogleApiWrapper} from 'google-maps-react';
 import map from "../../assets/image/exemplos/map.png"
+
+import List from "@material-ui/core/List";
+import ListSubheader from "@material-ui/core/ListSubheader";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+
+// ICONS
+import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import PhoneIcon from '@material-ui/icons/Phone';
+import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
 
 class Contato extends React.Component{
     constructor(props) {
         super(props);
+    }
+
+    componentDidMount() {
+        this.props.data.pagesActive('Contato');
     }
 
     render() {
@@ -53,6 +74,47 @@ class Contato extends React.Component{
                             >
                                 Aberto de Segunda a sexta, das 08:00Hs ás 19:00Hs
                             </H2>
+
+                            <List
+                                component="nav"
+                                aria-labelledby="nested-list-subheader"
+                                subheader={
+                                    <ListSubheader component="div" id="nested-list-subheader">
+                                        <H2 color='verdeAmarelado'>Nossos Contatos</H2>
+                                    </ListSubheader>
+                                }
+                            >
+                                <ListItem button>
+                                    <ListItemIcon className='icon-list-footer'>
+                                        <WhatsAppIcon style={{color: cores.verdeEscuro}}/>
+                                    </ListItemIcon>
+                                    <Contatos className='text-list-footer'>(21) 98343-3908</Contatos>
+                                </ListItem>
+
+                                <ListItem button>
+                                    <ListItemIcon className='icon-list-footer'>
+                                        <PhoneIcon style={{color: cores.verdeEscuro}}/>
+                                    </ListItemIcon>
+                                    <Contatos className='text-list-footer'>(21) 2544-6337 / 98343-3908</Contatos>
+                                </ListItem>
+
+                                <a target='_blank' style={{textDecoration: 'none'}} href={'https://www.facebook.com/LevesPesPodologia/'}>
+                                    <ListItem button>
+                                        <ListItemIcon className='icon-list-footer'>
+                                            <FacebookIcon style={{color: cores.verdeEscuro}}/>
+                                        </ListItemIcon>
+                                        <Contatos className='text-list-footer'>Nosso Página</Contatos>
+                                    </ListItem>
+                                </a>
+
+
+                                <ListItem button>
+                                    <ListItemIcon className='icon-list-footer'>
+                                        <AlternateEmailIcon style={{color: cores.verdeEscuro}}/>
+                                    </ListItemIcon>
+                                    <Contatos className='text-list-footer'>contato@levespes.com.br</Contatos>
+                                </ListItem>
+                            </List>
                         </div>
                     </Row>
                 </Container>

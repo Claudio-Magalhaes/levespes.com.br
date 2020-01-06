@@ -1,9 +1,7 @@
 import React from "react";
 
-import Header from '../../Component/estrutura/Header'
-import { ContainerBranco } from "../../Component/ui/Container/ContainerBranco";
 
-import {Container, Card, CardBody, CardImg, CardText, CardTitle} from "reactstrap";
+import {Container} from "reactstrap";
 import CardServicos  from "../../Component/ui/Card/CardServicos";
 
 export default class Tratamento extends React.Component{
@@ -13,6 +11,9 @@ export default class Tratamento extends React.Component{
         }
     }
 
+    componentDidMount() {
+        this.props.data.pagesActive('Tratamentos');
+    }
 
     render() {
 
