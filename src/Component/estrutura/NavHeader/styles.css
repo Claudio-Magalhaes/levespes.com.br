@@ -8,9 +8,17 @@
     z-index: 499;
 }
 
+#NavHeaderTransparente h1 {
+    font-family: "Amatic SC", "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 #NavHeaderTransparente a {
-    color: black;
+    color: var(--verdeEscuro);
     transition: color 1s;
+}
+
+#NavHeaderTransparente a:hover{
+    color: var(--verdeAmarelado);
 }
 
 #NavHeaderTransparente.affix a {

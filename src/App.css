@@ -11,7 +11,7 @@
 
 body {
   overflow-x: hidden;
-  font-family:  "Amatic", "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   background: rgba(251, 245, 247, 0.35) !important;
 
   --Branco: #F3EDEF;

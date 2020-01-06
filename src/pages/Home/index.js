@@ -235,7 +235,7 @@ export default class Home extends React.Component{
                                         </div>
                                     </div>
 
-                                    <h4 className="service-heading pt-2">{d.titulo}</h4>
+                                    <H3 fontBold={true} className="service-heading pt-2">{d.titulo}</H3>
                                     <p className="text-muted">{d.text}</p>
                                 </CardBeneficios>
                             ))}
