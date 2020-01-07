@@ -4,7 +4,7 @@ import Header from '../../Component/estrutura/Header'
 import { ContainerBranco } from '../../Component/ui/Container/ContainerBranco';
 
 import bgCont4 from '../../assets/image/bgCont4.jpg'
-import bg6 from '../../assets/image/bgCont6-2.png'
+import bg6 from '../../assets/image/bgCont6.png'
 
 
 import PrateleiraHorizontal from '../../Component/estrutura/PrateleiraHorizontal'
@@ -210,8 +210,17 @@ export default class Home extends React.Component{
 
                     <div className='container2'>
                         <H1  className={`cont2Header ${hide}`} color='verdeEscuro'>UM PÓUCO SOBRE A PODOLOGIA</H1>
-                        <p className={`cont2Text ${hide}`} style={{textAlign: "justify"}}>
-                            Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
+                        <p className={`cont2Text ${hide}`} style={{textAlign: "center"}}>
+                            Podologia: Podologia origina-se do grego tendo como prefixo e Sufixo:<br/>
+                            Podo ⇨ Pé.<br/>
+                            Logos ⇨ tratado, conhecimento e estudo.<br/>
+                            A podologia é da área da saúde que estuda patologias dos membros inferiores.<br/>
+                            Esta ciência é dedicada a diagnosticar, prevenir e tratar da saúde dos pés e proporcionar bemestar.<br/>
+                            O profissional podólogo aplica a podologia nas intervenções:<br/>
+                            *Infantil (podopediatria)<br/>
+                            *Idoso (podogeriatria)<br/>
+                            *Pé de risco (problemas circulatórios dos membros inferiores) – diabético<br/>
+                            *Preventiva<br/>
                         </p>
                     </div>
 

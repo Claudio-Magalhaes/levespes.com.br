@@ -31,6 +31,7 @@ import keraderm from "../assets/image/exemplos/produtos/keraderm.jpg";
 import proGel from "../assets/image/exemplos/produtos/proGel.jpg";
 import proPaste from "../assets/image/exemplos/produtos/proPaste.jpg";
 import proSept from "../assets/image/exemplos/produtos/proSept.jpg";
+import Cauterizacao from "../assets/image/exemplos/servicos/Cauterizacao.jpg";
 
 import "./Layout.css";
 
@@ -136,7 +137,7 @@ export default class Layout extends React.Component {
             {
                 title: 'Cauterização e Curativos',
                 text: "",
-                img: serv1,
+                img: Cauterizacao,
                 duracao: '00:40 Hs',
                 id: '11'
             },

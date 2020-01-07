@@ -74,7 +74,7 @@ export const Footer = () => (
                             <ListItemIcon className='icon-list-footer d-lg-block d-sm-none d-md-none'>
                                 <></>
                             </ListItemIcon>
-                            <ListItemText className='text-list-footer'>EsfoliarDerm</ListItemText>
+                            <ListItemText className='text-list-footer'>EsfoliaDerm</ListItemText>
                         </ListItem>
 
                         <ListItem button>

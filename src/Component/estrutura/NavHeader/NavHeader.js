@@ -12,6 +12,7 @@ import {
 import ScrollMagic from 'scrollmagic';
 
 import logo from './Logo.png';
+import Tipografia from "./Tipografia.png"
 import './styles.css';
 import {H1, H5} from "../../../assets/css/Component/Title";
 
@@ -53,8 +54,7 @@ class NavHeader extends React.Component{
                     </NavbarBrand>
                     <div className='d-none d-lg-block'>
                         <NavbarBrand href="/">
-                            <H1 color='verdeEscuro' style={{marginBottom: '0px', paddingBottom: '0px'}}>LEVES PÉS</H1>
-                            <H5 color='verdeEscuro' fontBold={true} style={{marginTop: '0px', paddingTop: '0px'}}>Podologia</H5>
+                            <img src={Tipografia}/>
                         </NavbarBrand>
                     </div>
 
@@ -78,7 +78,6 @@ class NavHeader extends React.Component{
                 </Navbar>
             </div>
         );
-
     }
 
 }
