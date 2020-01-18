@@ -1,7 +1,7 @@
 import React from "react";
 
 import { ContainerBranco } from '../../Component/ui/Container/ContainerBranco';
-import atavar from "../../assets/image/exemplos/avatar.png"
+import atavar from "../../assets/image/exemplos/servicos/semFundo.png"
 
 import './style.css'
 import {H1} from "../../Component/ui/Title";
@@ -44,7 +44,7 @@ export default class QuemSomos extends React.Component{
                     <div className='row d-inline-flex align-content-between'>
                         <div className='col-lg-3'>
                             <div className="imgCardContainer3 alignAll-center ml-auto mr-auto mb-2">
-                                <img src={atavar}/>
+                                {/*<img src={atavar}/>*/}
                             </div>
                         </div>
                         <div className='col-lg-9 mr-auto'>
@@ -78,7 +78,7 @@ export default class QuemSomos extends React.Component{
                         </div>
                         <div className='col-lg-3'>
                             <div className="imgCardContainer3 alignAll-center ml-auto mr-auto mb-2">
-                                <img src={atavar}/>
+                                {/*<img src={atavar}/>*/}
                             </div>
                         </div>
                     </div>

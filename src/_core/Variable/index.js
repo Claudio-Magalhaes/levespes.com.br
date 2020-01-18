@@ -2,10 +2,10 @@
 // // // Tasks for TasksCard - see Dashboard view
 // #############################
 
-// const urlServer = "http://institutopersonalmetrica.uni5.net";
+const urlServer = "http://levespes.com.br/";
 
 
-const urlServer = "http://localhost:3000";
+// const urlServer = "http://localhost:3000";
 
 const urlWebsite = '';
 

@@ -10,16 +10,16 @@ import PreHeader from "../Component/estrutura/PreHeader/PreHeader";
 import {Footer} from "../Component/estrutura/Footer";
 
 // IMAGENS DOS TRATAMENTOS
-import massagem1 from "../assets/image/exemplos/servicos/massagem1.jpg";
+import massagem1 from "../assets/image/exemplos/servicos/massagem1.jpeg";
 import massagem2 from "../assets/image/exemplos/servicos/massagem2.jpg";
 import PacoteDeTerapias_I from "../assets/image/exemplos/servicos/PacoteDeTerapias_I.jpg";
 import PacoteDeTerapias_II from "../assets/image/exemplos/servicos/PacoteDeTerapias_II.jpg";
-import hidratacaoExclusiva from "../assets/image/exemplos/servicos/hidratacaoExclusiva.jpg";
+import hidratacaoExclusiva from "../assets/image/exemplos/servicos/hidratacaoExclusiva.jpeg";
 import serv1 from "../assets/image/exemplos/servicos/serv1.jpg";
 import infantil from "../assets/image/exemplos/servicos/infantil.jpg";
 import corteDeUnhas from "../assets/image/exemplos/servicos/corteDeUnha.jpg";
 import convencional from "../assets/image/exemplos/servicos/Convencional.jpg";
-import ortese from "../assets/image/exemplos/servicos/Ortese.jpg";
+import ortese from "../assets/image/exemplos/servicos/Ortese.jpeg";
 import exclusivo from "../assets/image/exemplos/servicos/Exclusivo.jpg";
 import unhaEncravada from "../assets/image/exemplos/servicos/UnhaEncravada.jpg";
 
@@ -31,8 +31,10 @@ import keraderm from "../assets/image/exemplos/produtos/keraderm.jpg";
 import proGel from "../assets/image/exemplos/produtos/proGel.jpg";
 import proPaste from "../assets/image/exemplos/produtos/proPaste.jpg";
 import proSept from "../assets/image/exemplos/produtos/proSept.jpg";
-import Cauterizacao from "../assets/image/exemplos/servicos/Cauterizacao.jpg";
+import Cauterizacao from "../assets/image/exemplos/servicos/Cauterizacao.jpeg";
 
+
+import Sfundo from  "../assets/image/exemplos/servicos/semFundo.png";
 import "./Layout.css";
 
 export default class Layout extends React.Component {
@@ -59,7 +61,7 @@ export default class Layout extends React.Component {
                 title: 'Massagem II',
                 text: "Massagem manual relaxante, hidratação com cremes e vapor de ozônio",
                 valor: "98,00",
-                img: massagem2,
+                img: Sfundo,
                 duracao: '60 min',
                 id: '2'
             },
@@ -68,16 +70,16 @@ export default class Layout extends React.Component {
                 text: "Massagem manual relaxante com cremes e vapor de ozônio.",
                 text2: "6 sessões de terapia",
                 valor: "500,00",
-                img: PacoteDeTerapias_II,
+                img: Sfundo,
                 duracao: '60 min',
                 id: '3'
             },
             {
-                title: 'Hidratação com esfoliação e cremes com vapor de ozônio',
+                title: 'HIDRATAÇÃO EXCLUSIVA',
                 text: "Hidratação com esfoliação e cremes com vapor de ozônio",
                 text2: "Indicado para: Pés ressecados com fissuras, calosidades e calos.",
                 valor: "65,00",
-                img: hidratacaoExclusiva,
+                img: Sfundo,
                 duracao: '30 min',
                 id: '4'
             },
@@ -98,15 +100,15 @@ export default class Layout extends React.Component {
                 duracao: '40/50 min',
                 id: '6'
             },
-            {
-                title: 'Infantil',
-                text: "Diagnóstico, antissepsia e esfoliação, corte de unhas, desencravamento simples (sem inﬂamação / infecção).",
-                text2: "Hidratação com cremes e massagem por vibroterapia. (massageador eletrônico)",
-                valor: "70,00",
-                img: infantil,
-                duracao: '40/50 min',
-                id: '7'
-            },
+            // {
+            //     title: 'Infantil',
+            //     text: "Diagnóstico, antissepsia e esfoliação, corte de unhas, desencravamento simples (sem inﬂamação / infecção).",
+            //     text2: "Hidratação com cremes e massagem por vibroterapia. (massageador eletrônico)",
+            //     valor: "70,00",
+            //     img: infantil,
+            //     duracao: '40/50 min',
+            //     id: '7'
+            // },
             {
                 title: 'Órtese',
                 text: "Antissepsia, remoção da onicofose/calo subungueal com 3 aplicações em 3 meses.",
@@ -121,7 +123,7 @@ export default class Layout extends React.Component {
                 text: "Diagnóstico, antissepsia e esfoliação, corte de unhas, desencravamento simples (sem inﬂamação / infecção).",
                 text2: "Massagem manual relaxante, hidratação com cremes e vapor de ozônio.",
                 valor: "105,00",
-                img: exclusivo,
+                img: Sfundo,
                 duracao: '40/50 min',
                 id: '9'
             },
@@ -145,7 +147,7 @@ export default class Layout extends React.Component {
                 title: 'Pacote de Terapias I',
                 text: "Massagem manual relaxante com cremes e vapor de ozônio",
                 text2: "6 sessões de terapia",
-                img: PacoteDeTerapias_I,
+                img: Sfundo,
                 duracao: '30 min',
                 id: '12'
             }

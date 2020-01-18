@@ -47,47 +47,32 @@ export default class Home extends React.Component{
                 {
                     titulo: 'Fissura',
                     img: Fissuras,
-                    text: 'Fissura é o ressecamento da pele acentuada, com hiperqueratose, perda da elasticidade da' +
-                        'pele, que pode atingir os tecidos profundos levando ao sangramento.' +
-                        'Tratamento; remoção do excesso de céculas mortas, lixamento e hidratação com cremes e' +
-                        'vapor de ozônio.'
+                    text: 'Fissura é o ressecamento da pele acentuada, com hiperqueratose, perda da elasticidade da pele, que pode atingir os tecidos profundos levando ao sangramento. Tratamento; remoção do excesso de células mortas, lixamento e hidratação com cremes e vapor de ozônio.'
                 },
                 {
                     titulo: 'Órtese',
                     img: Ortese,
-                    text: 'Dispositivo com fibra molecular (FMM) para correção de unha encravada ou atrofiada.' +
-                        'Tratamento; profilaxia e remoção de calo sub ungueal (embaixo da unha), é trocado a cada 30' +
-                        'dias, em média 6 trocas dependendo da evolução do crescimento da unha hidratação da' +
-                        'cutícula (hiponíquio)'
+                    text: 'Dispositivo com fibra molecular (FMM) para correção de unha encravada ou atrofiada. Tratamento; profilaxia e remoção de calo sub ungueal (embaixo da unha), é trocado a cada 30 dias, em média 6 trocas dependendo da evolução do crescimento da unha hidratação da cutícula (hiponíquio)'
                 },
                 {
                     titulo: 'Unha encravada',
                     img: UnhaEncravada,
-                    text: 'Onicocriptose (unha encravada), eritema (vermelhidão), dor e edema (inchaço).' +
-                        'Tratamento; Remoção da espícula, aplicação de alta frequência para acelerar a cicatrização,' +
-                        'curativo e orientações.'
+                    text: 'Onicocriptose (unha encravada), eritema (vermelhidão), dor e edema (inchaço). Tratamento; Remoção da espícula, aplicação de alta frequência para acelerar a cicatrização, curativo e orientações.'
                 },
                 {
                     titulo: 'Calosidade',
                     img: Calosidade,
-                    text: 'É o espessamento da pele devido ao excesso de pressão continua no local.' +
-                        'Tratamento; realizar a remoção da calosidade lixando, hidratando e orientações para cuidados' +
-                        'domiciliares.'
+                    text: 'É o espessamento da pele devido ao excesso de pressão continua no local. Tratamento; realizar a remoção da calosidade lixando, hidratando e orientações para cuidados domiciliares.'
                 },
                 {
                     titulo: 'Micose (Onicomicose)',
                     img: Micose,
-                    text: 'A unha é acometida por fungo, modificando seu aspecto, cor, espessamento, odor e leito' +
-                        'ungueal.' +
-                        'Tratamento; consiste em limpeza do local afetado, remoção da laceração sob a lâmina, corte' +
-                        'correto e aplicação de antifúngico. Importante a colaboração do cliente/paciente nos cuidados' +
-                        'domiciliares para a evolução do tratamento'
+                    text: 'A unha é acometida por fungo, modificando seu aspecto, cor, espessamento, odor e leito ungueal. Tratamento; consiste em limpeza do local afetado, remoção da laceração sob a lâmina, corte correto e aplicação de antifúngico. Importante a colaboração do cliente/paciente nos cuidados domiciliares para a evolução do tratamento'
                 },
                 {
                     titulo: 'Benefícios',
                     img: Beneficios,
-                    text: 'Proporcionar relaxamento, alivio a tensão, dores e estresse, causando sensação de alívio,' +
-                        'leveza e bem estar.'
+                    text: 'Proporcionar relaxamento, alivio a tensão, dores e estresse, causando sensação de alívio, leveza e bem estar.'
                 },
             ]
         };
@@ -215,7 +200,7 @@ export default class Home extends React.Component{
                             Podo ⇨ Pé.<br/>
                             Logos ⇨ tratado, conhecimento e estudo.<br/>
                             A podologia é da área da saúde que estuda patologias dos membros inferiores.<br/>
-                            Esta ciência é dedicada a diagnosticar, prevenir e tratar da saúde dos pés e proporcionar bemestar.<br/>
+                            Esta ciência é dedicada a diagnosticar, prevenir e tratar da saúde dos pés e proporcionar bem estar.<br/>
                             O profissional podólogo aplica a podologia nas intervenções:<br/>
                             *Infantil (podopediatria)<br/>
                             *Idoso (podogeriatria)<br/>
@@ -255,21 +240,21 @@ export default class Home extends React.Component{
 
                 </div>
 
-                <div id='Container4' className='container-fluid Container4'>
-                    <div className='row'>
-                        <div className='col-md-6 mt-5 textBoxContainer4 hide'>
+                {/*<div id='Container4' className='container-fluid Container4'>*/}
+                {/*    <div className='row'>*/}
+                {/*        <div className='col-md-6 mt-5 textBoxContainer4 hide'>*/}
 
-                            <H1 fontSize='3rem' className={`showCont4Title ${hide}`}>Relação Tempo Benefício</H1>
-                            <p className={`mt-3 ml-4 mr-2 showCont4Text ${hide}`} style={{textAlign: "justify"}}>
-                                Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
-                            </p>
+                {/*            <H1 fontSize='3rem' className={`showCont4Title ${hide}`}>Relação Tempo Benefício</H1>*/}
+                {/*            <p className={`mt-3 ml-4 mr-2 showCont4Text ${hide}`} style={{textAlign: "justify"}}>*/}
+                {/*                Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.*/}
+                {/*            </p>*/}
 
-                        </div>
-                        <Container4Bg id='Cont4BgImg' className='col-md-6 pt-auto mb-auto imgBoxContainer4'>
-                            <img className='imgBoxContainer4' src={bgCont4} />
-                        </Container4Bg>
-                    </div>
-                </div>
+                {/*        </div>*/}
+                {/*        <Container4Bg id='Cont4BgImg' className='col-md-6 pt-auto mb-auto imgBoxContainer4'>*/}
+                {/*            <img className='imgBoxContainer4' src={bgCont4} />*/}
+                {/*        </Container4Bg>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
 
 
                 <div id='Container5' className='container-fluid mt-5'>
