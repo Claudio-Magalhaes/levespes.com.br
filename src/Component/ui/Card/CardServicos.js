@@ -39,7 +39,7 @@ const CardServicos = (prop) => {
                     fontBold={true}
                     fontSize={'200%'}
                 >
-                    {prop.data.title}
+                    {stringTrunc(prop.data.title, 20)}
                 </H1>
                 <CardSubtitle>
                     <H4

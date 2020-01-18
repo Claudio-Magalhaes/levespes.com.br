@@ -237,12 +237,12 @@ export default class Home extends React.Component{
                         <div className="row text-center">
 
                             {this.state.listBeneficios.map(d => (
-                                <CardBeneficios key={'beneficios-'+d.titulo} bg={d.img} className={`col-md-4 col-lg-4 ${hide} showCont3`}>
-                                    <div className='CircImgCardContainer3 alignAll-center ml-auto mr-auto mb-2'>
-                                        <div className=" imgCardContainer3 alignAll-center ml-auto mr-auto mb-2">
+                                <CardBeneficios key={'beneficios-'+d.titulo} bg={null} className={`col-md-4 col-lg-4 ${hide} showCont3`}>
+                                    {/*<div className='CircImgCardContainer3 alignAll-center ml-auto mr-auto mb-2'>*/}
+                                    {/*    <div className=" imgCardContainer3 alignAll-center ml-auto mr-auto mb-2">*/}
 
-                                        </div>
-                                    </div>
+                                    {/*    </div>*/}
+                                    {/*</div>*/}
 
                                     <H3 fontBold={true} className="service-heading pt-2">{d.titulo}</H3>
                                     <p className="text-muted">{d.text}</p>

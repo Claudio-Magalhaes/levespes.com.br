@@ -52,7 +52,7 @@ export default class Layout extends React.Component {
                 text: "Massagem manual relaxante, hidratação com cremes e vapor de ozônio.",
                 valor: "67,00",
                 img: massagem1,
-                duracao: '01:40 Hs',
+                duracao: '30 min',
                 id: '1'
             },
             {
@@ -60,25 +60,25 @@ export default class Layout extends React.Component {
                 text: "Massagem manual relaxante, hidratação com cremes e vapor de ozônio",
                 valor: "98,00",
                 img: massagem2,
-                duracao: '00:40 Hs',
+                duracao: '60 min',
                 id: '2'
             },
             {
                 title: 'Pacote de Terapias II',
                 text: "Massagem manual relaxante com cremes e vapor de ozônio.",
                 text2: "6 sessões de terapia",
-                valor: "5000,00",
+                valor: "500,00",
                 img: PacoteDeTerapias_II,
-                duracao: '00:40 Hs',
+                duracao: '60 min',
                 id: '3'
             },
             {
-                title: 'Hidratação Exclusiva',
+                title: 'Hidratação com esfoliação e cremes com vapor de ozônio',
                 text: "Hidratação com esfoliação e cremes com vapor de ozônio",
                 text2: "Indicado para: Pés ressecados com fissuras, calosidades e calos.",
                 valor: "65,00",
                 img: hidratacaoExclusiva,
-                duracao: '00:40 Hs',
+                duracao: '30 min',
                 id: '4'
             },
             {
@@ -86,7 +86,7 @@ export default class Layout extends React.Component {
                 text: "Antissepsia, corte e lixamento das unhas",
                 valor: "50,00",
                 img: corteDeUnhas,
-                duracao: '00:40 Hs',
+                duracao: '30 min',
                 id: '5'
             },
             {
@@ -95,7 +95,7 @@ export default class Layout extends React.Component {
                 text2: "Hidratação com cremes e massagem por vibroterapia. (massageador eletrônico)",
                 valor: "85,00",
                 img: convencional,
-                duracao: '00:40 Hs',
+                duracao: '40/50 min',
                 id: '6'
             },
             {
@@ -104,7 +104,7 @@ export default class Layout extends React.Component {
                 text2: "Hidratação com cremes e massagem por vibroterapia. (massageador eletrônico)",
                 valor: "70,00",
                 img: infantil,
-                duracao: '00:40 Hs',
+                duracao: '40/50 min',
                 id: '7'
             },
             {
@@ -113,7 +113,7 @@ export default class Layout extends React.Component {
                 text2: "Dispositivo utilizado para correção da unha encravada com FMM (Fibra de Memória Molecular).",
                 valor: "80,00",
                 img: ortese,
-                duracao: '00:40 Hs',
+                duracao: '30 min',
                 id: '8'
             },
             {
@@ -122,23 +122,23 @@ export default class Layout extends React.Component {
                 text2: "Massagem manual relaxante, hidratação com cremes e vapor de ozônio.",
                 valor: "105,00",
                 img: exclusivo,
-                duracao: '00:40 Hs',
+                duracao: '40/50 min',
                 id: '9'
             },
             {
                 title: 'Unha Encravada',
                 text: "Diagnóstico, antissepsia, remoção da espícula, cauterização com alta frequência e 3 curativos com 2 retornos a cada 48horas. ",
-                text2: "Retorno para curativos em diabéticos em 24 horas.",
+                text2: (<p>Retorno para curativos em diabéticos em 24 horas.<br/>* variações de tempo dependendo do quadro do cliente.</p>),
                 valor: "124,00",
                 img: unhaEncravada,
-                duracao: '00:40 Hs',
+                duracao: '60 min',
                 id: '10'
             },
             {
                 title: 'Cauterização e Curativos',
                 text: "",
                 img: Cauterizacao,
-                duracao: '00:40 Hs',
+                duracao: "",
                 id: '11'
             },
             {
@@ -146,7 +146,7 @@ export default class Layout extends React.Component {
                 text: "Massagem manual relaxante com cremes e vapor de ozônio",
                 text2: "6 sessões de terapia",
                 img: PacoteDeTerapias_I,
-                duracao: '00:40 Hs',
+                duracao: '30 min',
                 id: '12'
             }
         ];
