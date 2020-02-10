@@ -113,14 +113,14 @@ export const Footer = () => (
                             <ListItemIcon className='icon-list-footer'>
                                 <WhatsAppIcon style={{color: 'white'}}/>
                             </ListItemIcon>
-                            <ListItemText className='text-list-footer'>(21) 98343-3908</ListItemText>
+                            <ListItemText className='text-list-footer'>(21) 98343-9308</ListItemText>
                         </ListItem>
 
                         <ListItem button>
                             <ListItemIcon className='icon-list-footer'>
                                 <PhoneIcon style={{color: 'white'}}/>
                             </ListItemIcon>
-                            <ListItemText className='text-list-footer'>(21) 2544-6337 / 98343-3908</ListItemText>
+                            <ListItemText className='text-list-footer'>(21) 2544-6337 / 98343-9308</ListItemText>
                         </ListItem>
 
                         <a target='_blank' style={{textDecoration: 'none'}} href={'https://www.facebook.com/LevesPesPodologia/'}>
@@ -128,7 +128,7 @@ export const Footer = () => (
                                 <ListItemIcon className='icon-list-footer'>
                                     <FacebookIcon style={{color: 'white'}}/>
                                 </ListItemIcon>
-                                <ListItemText className='text-list-footer'>Nosso Página</ListItemText>
+                                <ListItemText className='text-list-footer'>Nossa Página</ListItemText>
                             </ListItem>
                         </a>
 

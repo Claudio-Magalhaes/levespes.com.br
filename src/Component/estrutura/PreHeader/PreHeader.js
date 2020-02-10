@@ -27,10 +27,10 @@ const PreHeader = (props) => {
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="ml-auto mr-auto" navbar>
                         <NavItem>
-                            <NavLink className='PreHeader-link' href={null}><WhatsAppIcon/> (21) 98343-3908</NavLink>
+                            <NavLink className='PreHeader-link' href={null}><WhatsAppIcon/> (21) 98343-9308</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink className='PreHeader-link' href={null}><PhoneIcon/> (21) 2544-6337 / 98343-3908</NavLink>
+                            <NavLink className='PreHeader-link' href={null}><PhoneIcon/> (21) 2544-6337 / 98343-9308</NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink className='PreHeader-link' target='_blank' href={'https://www.facebook.com/LevesPesPodologia/'}><FacebookIcon/> Visite nossa Página</NavLink>

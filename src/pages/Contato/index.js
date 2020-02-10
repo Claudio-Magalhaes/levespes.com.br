@@ -88,14 +88,14 @@ class Contato extends React.Component{
                                     <ListItemIcon className='icon-list-footer'>
                                         <WhatsAppIcon style={{color: cores.verdeEscuro}}/>
                                     </ListItemIcon>
-                                    <Contatos className='text-list-footer'>(21) 98343-3908</Contatos>
+                                    <Contatos className='text-list-footer'>(21) 98343-9308</Contatos>
                                 </ListItem>
 
                                 <ListItem button>
                                     <ListItemIcon className='icon-list-footer'>
                                         <PhoneIcon style={{color: cores.verdeEscuro}}/>
                                     </ListItemIcon>
-                                    <Contatos className='text-list-footer'>(21) 2544-6337 / 98343-3908</Contatos>
+                                    <Contatos className='text-list-footer'>(21) 2544-6337 / 98343-9308</Contatos>
                                 </ListItem>
 
                                 <a target='_blank' style={{textDecoration: 'none'}} href={'https://www.facebook.com/LevesPesPodologia/'}>
@@ -103,7 +103,7 @@ class Contato extends React.Component{
                                         <ListItemIcon className='icon-list-footer'>
                                             <FacebookIcon style={{color: cores.verdeEscuro}}/>
                                         </ListItemIcon>
-                                        <Contatos className='text-list-footer'>Nosso Página</Contatos>
+                                        <Contatos className='text-list-footer'>Nossa Página</Contatos>
                                     </ListItem>
                                 </a>
 

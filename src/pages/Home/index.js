@@ -67,7 +67,7 @@ export default class Home extends React.Component{
                 {
                     titulo: 'Micose (Onicomicose)',
                     img: Micose,
-                    text: 'A unha é acometida por fungo, modificando seu aspecto, cor, espessamento, odor e leito ungueal. Tratamento; consiste em limpeza do local afetado, remoção da laceração sob a lâmina, corte correto e aplicação de antifúngico. Importante a colaboração do cliente/paciente nos cuidados domiciliares para a evolução do tratamento'
+                    text: 'A unha é acometida por fungo, modificando seu aspecto, cor, espessamento, odor e leito ungueal. Tratamento; consiste em limpeza do local afetado, remoção da maceração sob a lâmina, corte correto e aplicação de antifúngico. Importante a colaboração do cliente/paciente nos cuidados domiciliares para a evolução do tratamento'
                 },
                 {
                     titulo: 'Benefícios',
@@ -194,7 +194,7 @@ export default class Home extends React.Component{
                 <ContainerBranco id='container2'>
 
                     <div className='container2'>
-                        <H1  className={`cont2Header ${hide}`} color='verdeEscuro'>UM PÓUCO SOBRE A PODOLOGIA</H1>
+                        <H1  className={`cont2Header ${hide}`} color='verdeEscuro'>UM POUCO SOBRE A PODOLOGIA</H1>
                         <p className={`cont2Text ${hide}`} style={{textAlign: "center"}}>
                             Podologia: Podologia origina-se do grego tendo como prefixo e Sufixo:<br/>
                             Podo ⇨ Pé.<br/>
